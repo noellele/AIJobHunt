@@ -1,13 +1,19 @@
-# Node
-node_modules/
-dist/
+# --- Frontend (Vite/React) ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
 
-# Python
-venv/
-__pycache__/
-*.pyc
-.env
+# --- Backend (Python) ---
+backend/venv/
+backend/.env
+backend/__pycache__/
+backend/*.py[cod]
+backend/*.so
+backend/.pytest_cache/
 
-# Editors
+# --- System & Editors ---
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
