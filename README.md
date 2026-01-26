@@ -40,7 +40,8 @@ pip install -r requirements.txt
 ```
 Start the backend server:  
 ```
-uvicorn main:app --reload
+cd ../
+uvicorn backend.main:app --reload
 ```
 
 #### 2. Frontend Setup  
