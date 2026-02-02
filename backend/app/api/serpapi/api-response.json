@@ -1,0 +1,2156 @@
+{
+    "search_metadata":
+    {
+    "id":
+    "6974564ca3882d01b6bb90e7",
+    "status":
+    "Success",
+    "json_endpoint":
+    "https://serpapi.com/searches/41f8517a8b8f9798/6974564ca3882d01b6bb90e7.json",
+    "created_at":
+    "2026-01-24 05:19:08 UTC",
+    "processed_at":
+    "2026-01-24 05:19:08 UTC",
+    "google_jobs_url":
+    "https://www.google.com/search?q=Software+Engineer&uule=w+CAIQICINVW5pdGVkIFN0YXRlcw&hl=en&gl=us&udm=8",
+    "raw_html_file":
+    "https://serpapi.com/searches/41f8517a8b8f9798/6974564ca3882d01b6bb90e7.html",
+    "total_time_taken":
+    1.67
+    },
+    "search_parameters":
+    {
+    "q":
+    "Software Engineer",
+    "engine":
+    "google_jobs",
+    "location_requested":
+    "United States",
+    "location_used":
+    "United States",
+    "google_domain":
+    "google.com",
+    "hl":
+    "en",
+    "gl":
+    "us"
+    },
+    "filters":
+    [
+    {
+    "name":
+    "Remote",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM",
+    "q":
+    "Software Engineer remote"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+remote&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQxKsJKAB6BAgWEAE&ictx=0",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+remote&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM"
+    },
+    {
+    "name":
+    "No degree",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI",
+    "q":
+    "Software Engineer no degree"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+no+degree&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQxKsJKAF6BAgREAE&ictx=0",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+no+degree&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI"
+    },
+    {
+    "name":
+    "Remote",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM",
+    "q":
+    "Software Engineer remote"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+remote&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQxKsJKAJ6BAgTEAE&ictx=0",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+remote&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-HOVO8aR5AoDEDJt6CDPYLrEFKWcbU18EUZewvhxDveqffST-fhv7D41wH5ftql4u5C1HmK5JxSNW374Hc-7PHzEj5PXK6N5k4qKoV8Tuy-6MzwgNznKAhq1Tcev_6tjkj0dVFn8hV0DE4RZlg1lKIsUOqzM"
+    },
+    {
+    "name":
+    "No degree",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI",
+    "q":
+    "Software Engineer no degree"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+no+degree&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQxKsJKAN6BAgSEAE&ictx=0",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+no+degree&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-WK0UDNKivMJLyxdIeklTpWRlCjxHyBP0Yeh7lzLO1fx7_yJ_tMSeQ7A4zH8lRBzG-u5gh_LLn7sgw9IROV0DV0E0Z1JW_WKlUtxbjKdYnHgyLvMzOOtknDal7XNBRlkFJ6m2E8dSYhnAx61YpxfN5sye2QI"
+    },
+    {
+    "name":
+    "Job type",
+    "options":
+    [
+    {
+    "name":
+    "Full time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A",
+    "q":
+    "Software Engineer full time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAC",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A"
+    },
+    {
+    "name":
+    "Part time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw",
+    "q":
+    "Software Engineer part time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAD",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw"
+    },
+    {
+    "name":
+    "Contract",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw",
+    "q":
+    "Software Engineer contract"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAE",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw"
+    },
+    {
+    "name":
+    "Internship",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ",
+    "q":
+    "Software Engineer internship"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAF",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ"
+    }
+    ]
+    },
+    {
+    "name":
+    "Job type",
+    "options":
+    [
+    {
+    "name":
+    "Full time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A",
+    "q":
+    "Software Engineer full time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAC",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A"
+    },
+    {
+    "name":
+    "Part time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw",
+    "q":
+    "Software Engineer part time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAD",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw"
+    },
+    {
+    "name":
+    "Contract",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw",
+    "q":
+    "Software Engineer contract"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAE",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw"
+    },
+    {
+    "name":
+    "Internship",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ",
+    "q":
+    "Software Engineer internship"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIFxAF",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ"
+    }
+    ]
+    },
+    {
+    "name":
+    "Date posted",
+    "options":
+    [
+    {
+    "name":
+    "Yesterday",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w",
+    "q":
+    "Software Engineer since yesterday"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+since+yesterday&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIKxAC",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+since+yesterday&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w"
+    },
+    {
+    "name":
+    "Last 3 days",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc",
+    "q":
+    "Software Engineer in the last 3 days"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+3+days&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIKxAD",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+3+days&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc"
+    },
+    {
+    "name":
+    "Last week",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk",
+    "q":
+    "Software Engineer in the last week"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+week&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIKxAE",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+week&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk"
+    },
+    {
+    "name":
+    "Last month",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk",
+    "q":
+    "Software Engineer in the last month"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+month&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQIKxAF",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+month&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk"
+    }
+    ]
+    },
+    {
+    "name":
+    "Date posted",
+    "options":
+    [
+    {
+    "name":
+    "Yesterday",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w",
+    "q":
+    "Software Engineer since yesterday"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+since+yesterday&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILhAC",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+since+yesterday&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-g-syTG9KEA4EjlKSRC6gJjYLjF7sVsbAuxyQVmXZ4Rwp4SHMgDRLsxTdVSIQIYeWJ1nr54_YVWonFYiQT9qQkf6WrH3O6NM25FT_bpl6y04N23tXiR3bIcl61CWrm7AU3vpUXzZujiXbrk_rzEY2qqMsOG1t6piR5xpJMQ3nSsZDP6kIr5NvWEWLMSrZg1k2KyP5ty6iPon5-6BOVnGA0Gmx986HVhXlc93HEhbxuq7RfiZvqc_wQQcaOT0nBsKVM-wcgnXEA7TqaN_VPmRljblSO1fDFqxpRa0r7Fd8N16AHdt6H3plCB3aAY3xC6L5TaZETQW0iRgcEQP7DIR5BCtAH6w"
+    },
+    {
+    "name":
+    "Last 3 days",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc",
+    "q":
+    "Software Engineer in the last 3 days"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+3+days&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILhAD",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+3+days&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ThlQEyARG4MPm-xOWDQYoCnDdh8rjUGcMC8081p6uoX5M-LC47AVrW_Uy-quzqsG0YOWFjJzw6EcjYyTRFrKwWD9HYRwwGKHglxpM-NSD36hVRSJirPOss5DuOvEmPuI560FD_PURTdutLi9xSza8xwYqTodnhroFzvtsobEN33x2b-Qwu1eS7bbOhx4sCJ-ntjspFfMzuImfxTJ5YSAO32CdChNWOJtgbbQ2qpUG3f6VPBD1fnSJr4NDhw7pqhxGYVEdiUt-APZaE7nmCixeAHYxR-hKQ0txigwti58uz5AECX4S06eC8xbxiGyZ7_pHRwFQq0nhnZsySSLuEHuLTRF8Qc"
+    },
+    {
+    "name":
+    "Last week",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk",
+    "q":
+    "Software Engineer in the last week"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+week&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILhAE",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+week&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-jgFCQpAUrscfymUeg1hpG6E885r0P32QlGUIkMik5omAix9qzQ3_zu3mqp7U-FHPPkaUBy-I_H4hZFNpiny-rwoqFuNVLHRUwt18bf1YBmKHpBZthc2jGlOtYRK7QlvqldBBLeAm5imT12_0ePicD3aflDRvjT5UNtGTNq7cXmY6T3re5MBO9tWMjS0ZlLaujGZ2ufaklDs0-Zc67FxRNN9aXhy0-stIxdvBlS8efhwBunPfueiKykl5oXcQBwYkcZhSdgzZUIVO3yqpGGhW2l52Y4j_hZIofeY2eBpDxmck-7S2X_6aQUdNAHDsEUJWaiuJEXWf4Q8kCgaMBlzjhG3bsvk"
+    },
+    {
+    "name":
+    "Last month",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk",
+    "q":
+    "Software Engineer in the last month"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+in+the+last+month&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILhAF",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+in+the+last+month&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q6sehg8s2_gtyoyHl774Xw5LPE2cLyoPmU68FqlMXwj1XcBTsFO81_maN1KSVYCWIYcbqSjmnLD57fpsZRhsIgsCfUiK5aH1Xp7iuHWSUX2YTmjRh_2Q6SwHv3jx0xZu1VHZg_UbjnOmCpHHFJ8cSQiqOrzz08bEUBE_6Y2j-2IYzGdyvRFWHBGYSi5sLFzFj36U-_aLwsHhkwE8vVCnv6EISiFipB6u3Ll2O8rIdjd-yPzL0-xMD_W8Vtt1QvbkKtbn89m2fwbhS6Nrwp8o213GBoj_YiZK9bHoh_CCAe8-mDr7peiy3NjDrxCT75R9fHrTf4r6OseEZJJ0FSukE0gESXk"
+    }
+    ]
+    },
+    {
+    "name":
+    "Job type",
+    "options":
+    [
+    {
+    "name":
+    "Full time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A",
+    "q":
+    "Software Engineer full time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILRAC",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+full+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAzmKY-FG2HmXlGhYQtbC4ah7vZZhnWf2I5_4LzyUDjG5Vk09O_gLiY0TTIecvPFAaNByyV224xKhmucXpPBfexneIgyUXcF12uzsUY4AjJa4zY8pzHzONqRgoEWlC8XDIFkbBB7BXQLzToeW8Tufbos9Z-4j1TdLSIeqg8PegLXCXLFCHq8dvcLgfZq6W2JyYjPrtEfXWuATcbDAI-yVLI4hBFuwsqRsyPlco_z78i2ywMYV1hMCzopPApTWxNIx0vz784NqZ6-mZ5FA3YjT1je9vG3A"
+    },
+    {
+    "name":
+    "Part time",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw",
+    "q":
+    "Software Engineer part time"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILRAD",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+part+time&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-ZbGSULhpL_zH89gt27d6w_85G8k3g1v7y6Ixzi_z-HAXAB86azEg-BLC6XmItdNKxStYtkjV3nFHAKoHbrDwc1kOACKsRrMOYDvU8nvvbNY6qrB2LQCs3sgrwKVofjFhxGhQX9bDBId7Zm8Hk2soFxxfYHMrefZOoCXsUja-H_cBY7Gzzci80Os8qR8cmtbqZdLEsV-q3LufiYdTtpybi9vlLydt2nTkKOLdJ6b-ynt5z859QNftus3Y3_YMI_HCY5Fwo6VH1BJ3-hdDH6obSp06BJ-1oxJyF63O9BwxOzRFAj5QT9L5JdwL63lNDQNO0lD-lw"
+    },
+    {
+    "name":
+    "Contract",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw",
+    "q":
+    "Software Engineer contract"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILRAE",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+contract&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Q03GyZipndXEESclcIoE0QRfeWDShV5MBLB0C0MCxlPBZwRJnxy6goyqJfYZGb5w1h_aRfoqMwBB8jfhu7NP2GYH7mkO1QbzF4j06Q799wm0rIbzNVGwJHX3ieff7VBOZUIgYip88MkFahW6A5jik370ExeJT7xxY9CJhVCLgNn8doKCwKof27HOddKM5XAQfZE-BavCBIIOGi8rEjAXRoBxKQ_Vll9EzjSyL3HWDPCrdVv4Vac-mcIFdEZmOMY05srfgDKFPqjJhmFipA7u0H4XSfJBBecW0aLuqJyCXK0NJ0BmdMS4SjUwORVifhACRfgONw"
+    },
+    {
+    "name":
+    "Internship",
+    "parameters":
+    {
+    "uds":
+    "ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ",
+    "q":
+    "Software Engineer internship"
+    },
+    "link":
+    "https://www.google.com/search?sca_esv=7240fb74ca4f11de&gl=us&hl=en&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ&udm=8&sa=X&ved=2ahUKEwihnefOtqOSAxUIS_EDHbBJNfAQkbEKegQILRAF",
+    "serpapi_link":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&q=Software+Engineer+internship&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-z9-WBgL7D0UHj_mYxx2TMEgn1Vu1-g1TZwKLge4948K0rCmxv-uLlJVhy3FJMMQURehxLNbELJlMy5kKblfa8UUOYi43bBNt7FkmYwEgFvpC-pU3b0prBX8IXbS2sTETeEP73L4oFPQOBqzT5cJ7dKkLr51Yog4nPlPWWiBqgNtrcEd7MRG9VrL20EDSiVhK1lmLzIEpc4Q7jU7Jif4hWV3a0RC_PaOgWIbLiuk8b_mJzpD7pBgCObS-CXQzXdGPptS5BVESij0Sgt-QhJFirR2Nu1YYW9P6qLE10v7ITqIVl7AMBbePuAFo-rjMwTY_OAXwgQ"
+    }
+    ]
+    }
+    ],
+    "jobs_results":
+    [
+    {
+    "title":
+    "Staff Software Development Engineer",
+    "company_name":
+    "CVS Health",
+    "location":
+    "Salem, OR (+48 others)",
+    "via":
+    "CVS Health",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=YosYK98AABPc4FUcAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMsQrCQAwAUFz7A4JTZtGeCC51VFFcBA9cS1rSu8o1OZqg_Q6_WF3e-IrPrKi8YdeBl87eOBIc6UVJ8kBscOLQM9EIa7hKA0o4thGE4SwSEi320Sxr5ZxqKoMaWt-WrQxOmBqZ3FMa_VNr_NU5oVG93W2mMnNYzg8PDxfCZBF6Bo-JhhXc7l-ql2C5lQAAAA&shmds=v1_ATWGeeMY1np6nte3pPc2MOKkcLvtKawIHsNdNiQkEtvZHwu62A&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=YosYK98AABPc4FUcAAAAAA%3D%3D",
+    "thumbnail":
+    "https://serpapi.com/searches/6974564ca3882d01b6bb90e7/images/bb82471ee6283b5fe0ff52a413ae98711c861065779837e394dba4ad9a822f01.png",
+    "extensions":
+    [
+    "1 day ago",
+    "Full-time",
+    "Health insurance",
+    "Paid time off"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "1 day ago",
+    "schedule_type":
+    "Full-time",
+    "health_insurance":
+    true,
+    "paid_time_off":
+    true
+    },
+    "description":
+    "We’re building a world of health around every individual — shaping a more connected, convenient and compassionate health experience. At CVS Health®, you’ll be surrounded by passionate colleagues who care deeply, innovate with purpose, hold ourselves accountable and prioritize safety and quality in everything we do. Join us and be part of something bigger – helping to simplify health care one person, one family and one community at a time.
+    
+    Join us at the start of a new era in health care where technology is transforming how and where care is delivered, creating a more connected, effective care experience for all. Our mission at Signify Health is to build trusted relationships to make people healthier. We do this by transforming the home into a health hub through a combination of data, technology & people. We are building a unified technology platform for value-based care that is improving care and reducing spending by treating patients in lower-cost settings and linking providers’ payments to patient outcomes. Signify Health is driving this industry transformation and solving some of the most challenging problems in healthcare – this is where you come in!
+    
+    About the Role
+    
+    As a Staff Software Engineer, you’ll be a key member of a collaborative team responsible for design, delivery and operation of business-critical, distributed systems. We’re looking for technically strong, passionate people with an entrepreneurial spirit to build and sustain innovative solutions.
+    
+    Responsibilities
+    • Lead technical initiatives that solve complex, enterprise-wide problems - ensuring maintainability, performance, and scalability.
+    • Design, build and maintain business-critical, enterprise-grade systems using modern technology and techniques.
+    • Deliver incremental value through iterative, customer-focused releases.
+    • Drive long-term improvements - focusing on simplicity and maintainability.
+    • Collaborate with others to develop solutions that meet cross-organization needs.
+    • Research, propose and adopt leading edge technology.
+    • Continually refine yourself and others through learning and mentorship.
+    
+    Basic Qualifications
+    • 7 years of software development experience.
+    • Strong foundation in software engineering: problem solving, data structures, algorithms, patterns, concurrency.
+    • Experience as a polyglot software engineer. Experience with more than one of: C++, C#, Java, Golang, Javascript, Typescript, Python or similar.
+    • Experience using full-stack development to ship and operate large-scale systems.
+    • Strong SQL skills and understanding of RDBMS such as SQL Server or PostgreSQL.
+    • Strong experience with distributed systems design, implementation and operation at scale.
+    • Strong experience with cloud vendors: Azure, AWS or GCP.
+    • Clear and effective communication.
+    
+    Preferred Qualifications
+    • Bachelors of Science in Computer Science or a related field or equivalent work experience.
+    • Familiarity with asynchronous, event-based architectures.
+    • Experience with the following technologies: Kafka, REST APIs, Protobuf, gRPC, Docker, Kubernetes, Terraform.
+    • Experience with an Application and Performance Monitoring platform. Ex: New Relic.
+    • Experience establishing and maintaining CI/CD pipelines.
+    • Experience with agile methodologies.
+    
+    About Signify Health
+    
+    Signify Health is helping build the healthcare system we all want to experience by transforming the home into the healthcare hub. We coordinate care holistically across individuals’ clinical, social, and behavioral needs so they can enjoy more healthy days at home. By building strong connections to primary care providers and community resources, we’re able to close critical care and social gaps, as well as manage risk for individuals who need help the most. This leads to better outcomes and a better experience for everyone involved.
+    
+    Our high-performance networks are powered by more than 10,000 mobile doctors and nurses covering every county in the U.S., 3,500 healthcare providers and facilities in value-based arrangements, and hundreds of community-based organizations. Signify’s intelligent technology and decision-support services enable these resources to radically simplify care coordination for more than 1.5 million individuals each year while helping payers and providers more effectively implement value-based care programs.
+    
+    We are committed to equal employment opportunities for employees and job applicants in compliance with applicable law and to an environment where employees are valued for their differences.
+    
+    To learn more about how we’re driving outcomes and making healthcare work better, please visit us at www.signifyhealth.com.
+    
+    Pay Range
+    
+    The typical pay range for this role is:
+    
+    $106,605.00 - $284,280.00
+    
+    This pay range represents the base hourly rate or base annual full-time salary for all positions in the job grade within which this position falls. The actual base salary offer will depend on a variety of factors including experience, education, geography and other relevant factors. This position is eligible for a CVS Health bonus, commission or short-term incentive program in addition to the base pay range listed above. This position also includes an award target in the company’s equity award program.
+    
+    Our people fuel our future. Our teams reflect the customers, patients, members and communities we serve and we are committed to fostering a workplace where every colleague feels valued and that they belong.
+    
+    Great benefits for great people
+    
+    We take pride in our comprehensive and competitive mix of pay and benefits – investing in the physical, emotional and financial wellness of our colleagues and their families to help them be the healthiest they can be. In addition to our competitive wages, our great benefits include:
+    • Affordable medical plan options, a 401(k) plan (including matching company contributions), and an employee stock purchase plan.
+    • No-cost programs for all colleagues including wellness screenings, tobacco cessation and weight management programs, confidential counseling and financial coaching.
+    • Benefit solutions that address the different needs and preferences of our colleagues including paid time off, flexible work schedules, family leave, dependent care resources, colleague assistance programs, tuition assistance, retiree medical access and many other benefits depending on eligibility.
+    
+    For more information, visit https://jobs.cvshealth.com/us/en/benefits
+    
+    We anticipate the application window for this opening will close on: 02/05/2026
+    
+    Qualified applicants with arrest or conviction records will be considered for employment in accordance with all federal, state and local laws.",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "7 years of software development experience",
+    "Strong foundation in software engineering: problem solving, data structures, algorithms, patterns, concurrency",
+    "Experience as a polyglot software engineer",
+    "Experience with more than one of: C++, C#, Java, Golang, Javascript, Typescript, Python or similar",
+    "Experience using full-stack development to ship and operate large-scale systems",
+    "Strong SQL skills and understanding of RDBMS such as SQL Server or PostgreSQL",
+    "Strong experience with distributed systems design, implementation and operation at scale",
+    "Strong experience with cloud vendors: Azure, AWS or GCP",
+    "Clear and effective communication",
+    "Experience establishing and maintaining CI/CD pipelines",
+    "Experience with agile methodologies"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "$106,605.00 - $284,280.00",
+    "This pay range represents the base hourly rate or base annual full-time salary for all positions in the job grade within which this position falls",
+    "The actual base salary offer will depend on a variety of factors including experience, education, geography and other relevant factors",
+    "This position is eligible for a CVS Health bonus, commission or short-term incentive program in addition to the base pay range listed above",
+    "This position also includes an award target in the company’s equity award program",
+    "We take pride in our comprehensive and competitive mix of pay and benefits – investing in the physical, emotional and financial wellness of our colleagues and their families to help them be the healthiest they can be",
+    "In addition to our competitive wages, our great benefits include:",
+    "Affordable medical plan options, a 401(k) plan (including matching company contributions), and an employee stock purchase plan",
+    "No-cost programs for all colleagues including wellness screenings, tobacco cessation and weight management programs, confidential counseling and financial coaching",
+    "Benefit solutions that address the different needs and preferences of our colleagues including paid time off, flexible work schedules, family leave, dependent care resources, colleague assistance programs, tuition assistance, retiree medical access and many other benefits depending on eligibility"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "As a Staff Software Engineer, you’ll be a key member of a collaborative team responsible for design, delivery and operation of business-critical, distributed systems",
+    "Lead technical initiatives that solve complex, enterprise-wide problems - ensuring maintainability, performance, and scalability",
+    "Design, build and maintain business-critical, enterprise-grade systems using modern technology and techniques",
+    "Deliver incremental value through iterative, customer-focused releases",
+    "Drive long-term improvements - focusing on simplicity and maintainability",
+    "Collaborate with others to develop solutions that meet cross-organization needs",
+    "Research, propose and adopt leading edge technology",
+    "Continually refine yourself and others through learning and mentorship"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "CVS Health",
+    "link":
+    "https://jobs.cvshealth.com/us/en/job/R0810771/Staff-Software-Development-Engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Talent.com",
+    "link":
+    "https://www.talent.com/view?id=cfec0799874e&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTdGFmZiBTb2Z0d2FyZSBEZXZlbG9wbWVudCBFbmdpbmVlciIsImNvbXBhbnlfbmFtZSI6IkNWUyBIZWFsdGgiLCJhZGRyZXNzX2NpdHkiOiJTYWxlbSwgT1IiLCJodGlkb2NpZCI6Illvc1lLOThBQUJQYzRGVWNBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lOVlc1cGRHVmtJRk4wWVhSbGN3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ=="
+    },
+    {
+    "title":
+    "Software Engineer III - ERP Finance (Oracle/PLSQL)",
+    "company_name":
+    "Spectrum",
+    "location":
+    "Greenwood Village, CO",
+    "via":
+    "Built In Colorado",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=4Wufu170GiTUUCtSAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xWNsQrCMBQAce0nOD03FW1EcNFRqlQKVQuuJY3PNJK-F5JI-0_-pHW55eAu-U6SvOJX7KVHyEgbQvSQ5zmsIbtf4WRIkkKYl14qi-JaVLdiMcoLNxBQetUCE5yZtcXpoY3Rhb0QIdhUhyijUaniTjBhw4N4cxP-qEM7_pyVEevtbjOkjvRyVjlU0X86MGPQI1LP_ISHsVZqXMGx_AEkr4YWrgAAAA&shmds=v1_ATWGeeNYrn6FcnPFbRXSs4NGXH3_i7J858-_50v1rEzLHivNaQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=4Wufu170GiTUUCtSAAAAAA%3D%3D",
+    "extensions":
+    [
+    "1 day ago",
+    "70.9K–140K a year",
+    "Full-time"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "1 day ago",
+    "salary":
+    "70.9K–140K a year",
+    "schedule_type":
+    "Full-time"
+    },
+    "description":
+    "This role requires the ability to work lawfully in the U.S. without employment-based immigration sponsorship, now or in the future.
+    This position is not eligible for immigration sponsorship.
+    Do you want to elevate Spectrum's financial systems with your expertise in software engineering and hands-on Oracle and PL/SQL development? As a Software Engineer III - ERP Finance (Oracle/PLSQL), you will design, enhance and support essential financial software, sustaining business operations, advancing revenue goals and driving operational excellence. Your skills will help ensure robust, high-performance systems critical to Spectrum's success.
+    How You'll Make an Impact
+    • Design and implement new software functionality using best practices and approved code patterns with limited oversight
+    • Apply object-oriented principles and computer science fundamentals to deliver high-quality, maintainable code
+    • Participate in Agile and Scrum processes by engaging in rituals and meeting project timelines
+    • Create and execute comprehensive test plans, identify and resolve defects to ensure software reliability and compliance
+    • Collaborate with technical team members to analyze and solve complex problems while responding to customer inquiries about software behavior
+    • Develop and maintain accurate technical documentation to support ongoing system improvements
+    • Ensure all code contributions adhere to legal, regulatory and security requirements
+    
+    Working Conditions
+    • Office environment (hybrid 4:1)
+    
+    What You'll Bring to Spectrum
+    Required Qualifications
+    Education
+    • Bachelor's degree in Information Technology, Computer Science, related field or equivalent combination of education and experience
+    
+    Experience
+    • 1+ years of experience in database management systems
+    • 1+ years of experience in coding, testing and designing software
+    • 1+ years of experience with software development methodologies
+    
+    Preferred Qualifications - Experience
+    • 3+ years of hands-on experience with database management systems, specifically Oracle and PL/SQL
+    • 3+ years hands-on coding, testing and designing software using Java, JavaScript, Node.js, Spring Boot and GitLab
+    • 3+ years hands-on with modern software development methodologies
+    
+    Skills
+    • Proficiency in reading, writing, speaking and understanding English
+    • Demonstrated knowledge of at least one major programming language or tool, including syntax, functions and object-oriented patterns
+    • Understanding of environments, container runtimes, docker images, cloud native app development, design patterns and frameworks
+    • Familiarity with dependent systems such as APIs, clients, data stores and CI/CD pipelines
+    • Ability to analyze moderately complex problems and determine appropriate solutions within established procedures
+    • Capable of multitasking, prioritizing tasks and working with minimal supervision
+    • Experience showcasing project or feature-level work to technical teams
+    • Basic negotiation skills
+    
+    #LI-SS5
+    ESW342 2026-68522 2026
+    Here, our employees don't just have jobs, they're building careers. That's why we offer a comprehensive package that rewards employees for their contributions to our success, supporting all aspects of their well-being at every stage of life.
+    A qualified applicant's criminal history, if any, will be considered in a manner consistent with applicable laws, including local ordinances.
+    This job posting will remain open until 2026-02-05 08:00 PM (UTC) and will be extended if necessary.
+    The base pay for this position generally is between
+    $70,900.00 and $139,500.00. The actual compensation offered will carefully consider a wide range of factors, including your skills, qualifications, experience, and location. We comply with local wage minimums and also, certain positions are eligible for additional forms of other incentive-based compensation such as bonuses.
+    Get to Know Us Charter Communications provides superior communication and entertainment products for residential and business customers through the Spectrum brand. Our offerings include Spectrum Internet®, TV, Mobile and Voice. Beyond our connectivity solutions, we also provide local news, programming and regional sports via Spectrum Networks and multiscreen advertising solutions via Spectrum Reach. When you join our team, you'll be keeping our customers connected to what matters most in 41 states across the U.S.
+    Grow Your Career Here We're committed to growing a workforce that reflects the customers and communities we serve - providing opportunities for employment and advancement to all team members. Spectrum is an Equal Opportunity Employer, including job seekers with disabilities and veterans.",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "This role requires the ability to work lawfully in the U.S. without employment-based immigration sponsorship, now or in the future",
+    "Bachelor's degree in Information Technology, Computer Science, related field or equivalent combination of education and experience",
+    "1+ years of experience in database management systems",
+    "1+ years of experience in coding, testing and designing software",
+    "1+ years of experience with software development methodologies",
+    "Proficiency in reading, writing, speaking and understanding English",
+    "Demonstrated knowledge of at least one major programming language or tool, including syntax, functions and object-oriented patterns",
+    "Understanding of environments, container runtimes, docker images, cloud native app development, design patterns and frameworks",
+    "Familiarity with dependent systems such as APIs, clients, data stores and CI/CD pipelines",
+    "Ability to analyze moderately complex problems and determine appropriate solutions within established procedures",
+    "Capable of multitasking, prioritizing tasks and working with minimal supervision",
+    "Experience showcasing project or feature-level work to technical teams",
+    "Basic negotiation skills"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "$70,900.00 and $139,500.00",
+    "The actual compensation offered will carefully consider a wide range of factors, including your skills, qualifications, experience, and location",
+    "We comply with local wage minimums and also, certain positions are eligible for additional forms of other incentive-based compensation such as bonuses"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "As a Software Engineer III - ERP Finance (Oracle/PLSQL), you will design, enhance and support essential financial software, sustaining business operations, advancing revenue goals and driving operational excellence",
+    "Your skills will help ensure robust, high-performance systems critical to Spectrum's success",
+    "Design and implement new software functionality using best practices and approved code patterns with limited oversight",
+    "Apply object-oriented principles and computer science fundamentals to deliver high-quality, maintainable code",
+    "Participate in Agile and Scrum processes by engaging in rituals and meeting project timelines",
+    "Create and execute comprehensive test plans, identify and resolve defects to ensure software reliability and compliance",
+    "Collaborate with technical team members to analyze and solve complex problems while responding to customer inquiries about software behavior",
+    "Develop and maintain accurate technical documentation to support ongoing system improvements",
+    "Ensure all code contributions adhere to legal, regulatory and security requirements"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "Built In Colorado",
+    "link":
+    "https://www.builtincolorado.com/job/software-engineer-iii-erp-finance-oracle-plsql/8291978?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Teal",
+    "link":
+    "https://www.tealhq.com/job/software-engineer-iii-scala_ab7de61e-d723-4d65-bdb5-155006c63300?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Built In",
+    "link":
+    "https://builtin.com/job/software-engineer-iii-erp-finance-oracle-plsql/8291978?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciBJSUkgLSBFUlAgRmluYW5jZSAoT3JhY2xlL1BMU1FMKSIsImNvbXBhbnlfbmFtZSI6IlNwZWN0cnVtIiwiYWRkcmVzc19jaXR5IjoiR3JlZW53b29kIFZpbGxhZ2UsIENPIiwiaHRpZG9jaWQiOiI0V3VmdTE3MEdpVFVVQ3RTQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJTlZXNXBkR1ZrSUZOMFlYUmxjdyIsImdsIjoidXMiLCJobCI6ImVuIn0="
+    },
+    {
+    "title":
+    "Senior Principal Software Engineer- OCI AI Services",
+    "company_name":
+    "Oracle",
+    "location":
+    "Santa Fe, NM",
+    "via":
+    "WhatJobs",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=-Ylpsymqdl0vtya_AAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMsQrCMBAAUFz9AAenm8U2IrjoJKLSglbIB5RrONNIvCu5oP0d_1Rd3vimn8m0tsRBEtxSYBcGjGDlnt-YCI7sAxOlAppDBfsKLKVXcKRQQC0dKGFyPQjDWcRHmu_6nAfdGqMaS68Zc3Clk6cRpk5G85BO_7Ta__4hYqZ2vVmN5cB-MWsSukgQGCxyRjjREq6XL25lJLSkAAAA&shmds=v1_ATWGeeOv8HQy6OwL_wRhxr-0El9HZ1VDTArJoO0laTKPD6PU1w&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=-Ylpsymqdl0vtya_AAAAAA%3D%3D",
+    "extensions":
+    [
+    "3 days ago",
+    "Full-time",
+    "Health insurance",
+    "Paid time off",
+    "Dental insurance"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "3 days ago",
+    "schedule_type":
+    "Full-time",
+    "health_insurance":
+    true,
+    "paid_time_off":
+    true,
+    "dental_coverage":
+    true
+    },
+    "description":
+    "**Job Description**
+    At Oracle Cloud Infrastructure (OCI), we are redefining the future of computing for enterprises-building cloud-native systems from the ground up, powered by a global team of visionary engineers, scientists, and creators. We combine the agility of a startup with the scale, security, and reach of Oracle's enterprise-grade platforms.
+    Our Generative AI Service team is pioneering the development of infrastructure and services that harness the transformative power of Large Language Models (LLMs) and Agentic AI systems. Our mission is to build world-class, scalable platforms that enable customers to deploy intelligent agents and applications, deeply integrated with OCI's robust cloud ecosystem.
+    Role Summary
+    As a Consulting Member of Technical Staff (IC5), you will play a pivotal role in designing, building, and optimizing LLM infrastructure, agent execution runtimes, and next-generation developer platforms. You'll collaborate closely with applied scientists and ML engineers to bring agentic workflows into real-world deployments-at scale. This is a hands-on technical leadership role, ideal for someone deeply rooted in distributed systems and low-level computer science.
+    Minimum Qualifications
+    - BS in Computer Science or equivalent experience.
+    - 10+ years of experience in production-grade distributed systems and cloud-native software engineering.
+    - Proficiency in Go, Java, Python, or C++.
+    - Expertise in high-performance computing and ML model serving infrastructure.
+    - Deep understanding of container orchestration and CI/CD pipelines.
+    - Strong communication skills and experience mentoring across teams.
+    Preferred Qualifications
+    - MS or PhD in Computer Science, particularly in Systems, ML Infrastructure, or Compilers.
+    - Experience with LLM serving frameworks like vLLM, FasterTransformer, DeepSpeed, or Triton.
+    - Familiarity with agent-based systems.
+    - Contributions to LLM-native developer tools and compiler IRs.
+    - Experience with vector databases, tool APIs, and event-driven workflows.
+    - Foundation in OS internals, compiler pipelines, and systems programming.
+    - Proven ability to lead large-scale architecture efforts.
+    Why Join Us
+    - Be at the frontier of generative AI and agent-based software interaction.
+    - Work on mission-critical projects impacting Oracle's AI strategy.
+    - Collaborate with a globally distributed team of leading engineers and researchers.
+    - Enjoy the agility of a fast-moving team with enterprise-level resources.
+    • *Responsibilities**
+    • *Responsibilities**
+    - Architect and build high-throughput, low-latency serving systems for LLM inference and agent orchestration.
+    - Design agent-native runtime environments that support dynamic planning, tool calling, memory, and long-running context.
+    - Integrate foundational AI components with OCI's compute and networking layers.
+    - Partner with ML research to optimize model training, fine-tuning, and inference performance on GPU clusters.
+    - Own critical paths of software delivery from architectural review through implementation and post-deployment resilience.
+    - Contribute to OCI's developer-facing agent framework.
+    - Tackle deep systems-level challenges, drawing on knowledge in operating systems, compiler design, and cloud primitives.
+    Disclaimer:
+    • *Certain US customer or client-facing roles may be required to comply with applicable requirements, such as immunization and occupational health mandates.**
+    • *Range and benefit information provided in this posting are specific to the stated locations only**
+    US: Hiring Range in USD from: $96,800 to $251,600 per annum. May be eligible for bonus, equity, and compensation deferral.
+    Oracle maintains broad salary ranges for its roles in order to account for variations in knowledge, skills, experience, market conditions and locations, as well as reflect Oracle's differing products, industries and lines of business.
+    Candidates are typically placed into the range based on the preceding factors as well as internal peer equity.
+    Oracle US offers a comprehensive benefits package which includes the following:
+    1. Medical, dental, and vision insurance, including expert medical opinion
+    2. Short term disability and long term disability
+    3. Life insurance and AD&D
+    4. Supplemental life insurance (Employee/Spouse/Child)
+    5. Health care and dependent care Flexible Spending Accounts
+    6. Pre-tax commuter and parking benefits
+    7. 401(k) Savings and Investment Plan with company match
+    8. Paid time off: Flexible Vacation is provided to all eligible employees assigned to a salaried (non-overtime eligible) position. Accrued Vacation is provided to all other employees eligible for vacation benefits. For employees working at least 35 hours per week, the vacation accrual rate is 13 days annually for the first three years of employment and 18 days annually for subsequent years of employment. Vacation accrual is prorated for employees working between 20 and 34 hours per week. Employees working fewer than 20 hours per week are not eligible for vacation.
+    9. 11 paid holidays
+    10. Paid sick leave: 72 hours of paid sick leave upon date of hire. Refreshes each calendar year. Unused balance will carry over each year up to a maximum cap of 112 hours.
+    11. Paid parental leave
+    12. Adoption assistance
+    13. Employee Stock Purchase Plan
+    14. Financial planning and group legal
+    15. Voluntary benefits including auto, homeowner and pet insurance
+    The role will generally accept applications for at least three calendar days from the posting date or as long as the job remains posted.
+    Career Level - IC5
+    • *About Us**
+    As a world leader in cloud solutions, Oracle uses tomorrow's technology to tackle today's challenges. We've partnered with industry-leaders in almost every sector-and continue to thrive after 40+ years of change by operating with integrity.
+    We know that true innovation starts when everyone is empowered to contribute. That's why we're committed to growing an inclusive workforce that promotes opportunities for all.
+    Oracle careers open the door to global opportunities where work-life balance flourishes. We offer competitive benefits based on parity and consistency and support our people with flexible medical, life insurance, and retirement options. We also encourage employees to give back to their communities through our volunteer programs.
+    We're committed to including people with disabilities at all stages of the employment process. If you require accessibility assistance or accommodation for a disability at any point, let us know by emailing or by calling in the United States.
+    Oracle is an Equal Employment Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, sexual orientation, gender identity, disability and protected veterans' status, or any other characteristic protected by law. Oracle will consider for employment qualified applicants with arrest and conviction records pursuant to applicable law.",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "BS in Computer Science or equivalent experience",
+    "10+ years of experience in production-grade distributed systems and cloud-native software engineering",
+    "Proficiency in Go, Java, Python, or C++",
+    "Expertise in high-performance computing and ML model serving infrastructure",
+    "Deep understanding of container orchestration and CI/CD pipelines",
+    "Strong communication skills and experience mentoring across teams",
+    "Design agent-native runtime environments that support dynamic planning, tool calling, memory, and long-running context",
+    "Contribute to OCI's developer-facing agent framework"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "Enjoy the agility of a fast-moving team with enterprise-level resources",
+    "US: Hiring Range in USD from: $96,800 to $251,600 per annum",
+    "May be eligible for bonus, equity, and compensation deferral",
+    "Oracle maintains broad salary ranges for its roles in order to account for variations in knowledge, skills, experience, market conditions and locations, as well as reflect Oracle's differing products, industries and lines of business",
+    "Oracle US offers a comprehensive benefits package which includes the following:",
+    "Medical, dental, and vision insurance, including expert medical opinion",
+    "Short term disability and long term disability",
+    "Life insurance and AD&D",
+    "Supplemental life insurance (Employee/Spouse/Child)",
+    "Health care and dependent care Flexible Spending Accounts",
+    "Pre-tax commuter and parking benefits",
+    "401(k) Savings and Investment Plan with company match",
+    "Paid time off: Flexible Vacation is provided to all eligible employees assigned to a salaried (non-overtime eligible) position",
+    "Accrued Vacation is provided to all other employees eligible for vacation benefits",
+    "For employees working at least 35 hours per week, the vacation accrual rate is 13 days annually for the first three years of employment and 18 days annually for subsequent years of employment",
+    "Vacation accrual is prorated for employees working between 20 and 34 hours per week",
+    "Employees working fewer than 20 hours per week are not eligible for vacation",
+    "11 paid holidays",
+    "Paid sick leave: 72 hours of paid sick leave upon date of hire",
+    "Refreshes each calendar year",
+    "Unused balance will carry over each year up to a maximum cap of 112 hours",
+    "Paid parental leave",
+    "Adoption assistance",
+    "Employee Stock Purchase Plan",
+    "Financial planning and group legal",
+    "Voluntary benefits including auto, homeowner and pet insurance",
+    "We offer competitive benefits based on parity and consistency and support our people with flexible medical, life insurance, and retirement options"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "As a Consulting Member of Technical Staff (IC5), you will play a pivotal role in designing, building, and optimizing LLM infrastructure, agent execution runtimes, and next-generation developer platforms",
+    "You'll collaborate closely with applied scientists and ML engineers to bring agentic workflows into real-world deployments-at scale",
+    "This is a hands-on technical leadership role, ideal for someone deeply rooted in distributed systems and low-level computer science",
+    "Work on mission-critical projects impacting Oracle's AI strategy",
+    "Collaborate with a globally distributed team of leading engineers and researchers",
+    "Architect and build high-throughput, low-latency serving systems for LLM inference and agent orchestration",
+    "Integrate foundational AI components with OCI's compute and networking layers",
+    "Partner with ML research to optimize model training, fine-tuning, and inference performance on GPU clusters",
+    "Own critical paths of software delivery from architectural review through implementation and post-deployment resilience",
+    "Tackle deep systems-level challenges, drawing on knowledge in operating systems, compiler design, and cloud primitives",
+    "*Certain US customer or client-facing roles may be required to comply with applicable requirements, such as immunization and occupational health mandates.**",
+    "*Range and benefit information provided in this posting are specific to the stated locations only**"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "WhatJobs",
+    "link":
+    "https://www.whatjobs.com/jobs/software-engineer?id=2411630939&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Adzuna",
+    "link":
+    "https://www.adzuna.com/details/5594660203?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Jobilize",
+    "link":
+    "https://www.jobilize.com/job/us-nm-santa-fe-senior-principal-software-engineer-oci-ai-services?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTZW5pb3IgUHJpbmNpcGFsIFNvZnR3YXJlIEVuZ2luZWVyLSBPQ0kgQUkgU2VydmljZXMiLCJjb21wYW55X25hbWUiOiJPcmFjbGUiLCJhZGRyZXNzX2NpdHkiOiJTYW50YSBGZSwgTk0iLCJodGlkb2NpZCI6Ii1ZbHBzeW1xZGwwdnR5YV9BQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lOVlc1cGRHVmtJRk4wWVhSbGN3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ=="
+    },
+    {
+    "title":
+    "Senior Software Engineer - US Remote",
+    "company_name":
+    "100019 Digital Recognition Network, Inc",
+    "location":
+    "United States",
+    "via":
+    "Workday",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=KqLJ-H7MvJmD7M5fAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xWNsQrCMBRFce0nOL1ZtGkFQe2qiA4Ohs4ljc802r5Xkgfth_mBxuVyuMM52XeRVRrJcwDNL5lMQDiT84QYYAO1hgcOLJj4xi1ENMF2wAQXZtfjsupExnhUKsY-d1GMeJtbHhQTtjyrN7fxP03sknrsjWCz3RVzPpJb7cuiKMoDnLzzYvqUsuzIi0_-O8rE4bOGK1nwBHX68Qk6FTD-ADidBw23AAAA&shmds=v1_ATWGeeP7w0JZ2YOwT6QmMTVDBV_j_ujS_qE9WAtSJR1a-lameA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=KqLJ-H7MvJmD7M5fAAAAAA%3D%3D",
+    "extensions":
+    [
+    "3 days ago",
+    "Full-time",
+    "No degree mentioned",
+    "Paid time off",
+    "Health insurance",
+    "Dental insurance"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "3 days ago",
+    "schedule_type":
+    "Full-time",
+    "qualifications":
+    "No degree mentioned",
+    "paid_time_off":
+    true,
+    "health_insurance":
+    true,
+    "dental_coverage":
+    true
+    },
+    "description":
+    "Company Overview At Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep people safer everywhere. Our critical communications, video security and command center technologies support public safety agencies and enterprises alike, enabling the coordination that’s critical for safer communities, safer schools, safer hospitals and safer businesses. Connect with a career that matters, and help us build a safer future. Department Overview With over 20 billion rows of license plate and geospatial data, Digital Recognition Network (https://drndata.com), a subsidiary of Motorola Solutions, is a fast-growing License Plate Recognition (LPR) data company that is looking for a talented software engineer to help build and maintain web applications that showcase our data and provide value for our commercial customers. You'll be working with a strong team of driven developers and creative product team to maintain our existing web applications and APIs - as well as building out products for new markets. Job Description Analyzes, develops, designs, and maintains software for the organization’s products and systems. Performs system integration of software and hardware to maintain throughput and program consistency. Develops, validates, and tests: structures and user documentation. Basic Requirements Responsibilities will include: Maintain existing applications by finding and fixing bugs that occur Rapidly build and evolve major features and applications in collaboration with product management Research and experiment with key technologies, architectures, and standards Attend daily stand-up meetings, collaborate with peers, prioritize features, and work with a sense of urgency to deliver value to customers Assist in code reviews and pull request reviews conducted at various points in the software life cycle Preferred qualifications: 7+ years of .NET and PHP development experience Experience working with a modern agile development process Strong skills with PHP 7+, .NET 4+, HTML5, CSS3, and modern Javascript (ideally ES6) Experience designing and integrating RESTful JSON APIs Strong communication skills, both written and verbal Strong analytical and critical thinking skills Independent, proactive, and hard-working Have a growth mindset with the ability to work independently in a fast-paced environment and handle multiple tasks and projects simultaneously. Demonstrate an ability to set objectives and goals and organize work appropriately to meet and exceed goals. Comfortable collaborating and communicating with people at varying levels, junior to executive, both internally and externally Able to receive feedback well and incorporate it into future work Target Base Salary Range: $145,000 - $160,000 USD Consistent with Motorola Solutions values and applicable law, we provide the following information to promote pay transparency and equity. Pay within this range varies and depends on job-related knowledge, skills, and experience. The actual offer will be based on the individual candidate. #LI-NJ1 #LI-REMOTE Travel Requirements Under 10% Relocation Provided None Position Type Experienced Referral Payment Plan Yes Our U.S. Benefits include: Incentive Bonus Plans Medical, Dental, Vision benefits 401K with Company Match 10 Paid Holidays Generous Paid Time Off Packages Employee Stock Purchase Plan Paid Parental & Family Leave and more! EEO Statement Motorola Solutions is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion or belief, sex, sexual orientation, gender identity, national origin, disability, veteran status or any other legally-protected characteristic. We are proud of our people-first and community-focused culture, empowering every Motorolan to be their most authentic self and to do their best work to deliver on the promise of a safer world. If you’d like to join our team but feel that you don’t quite meet all of the preferred skills, we’d still love to hear why you think you’d be a great addition to our team. We’re committed to providing an inclusive and accessible recruiting experience for candidates with disabilities, or other physical or mental health conditions. To request an accommodation, please complete this Reasonable Accommodations Form so we can assist you. MOTOROLA SOLUTIONS OVERVIEW At Motorola Solutions, we believe that everything starts with our people. We’re a global close-knit community, united by the relentless pursuit to help keep people safer everywhere. Our critical communications, video security and command center technologies support public safety agencies and enterprises alike, enabling the coordination that’s critical for safer communities, safer schools, safer hospitals and safer businesses. Connect with a career that matters, and help us build a safer future. Learn more at www.motorolasolutions.com. If you are a current Motorola Solutions employee, please click this link to apply through your Workday account.",
+    "apply_options":
+    [
+    {
+    "title":
+    "Workday",
+    "link":
+    "https://motorolasolutions.wd5.myworkdayjobs.com/en-US/Careers/job/Senior-Software-Engineer---US-Remote_R60990-1?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Scala Jobs",
+    "link":
+    "https://scalajobs.com/jobs/Scalac-Mid-Senior-Scala-Software-Engineer-Remote-US-fC7nRv2UqGlGMqSbLpDY?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Teal",
+    "link":
+    "https://www.tealhq.com/job/senior-software-engineer_7ea1aca3c1fa3a38a7fe7508b17704f692f06?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Jobgether",
+    "link":
+    "https://jobgether.com/offer/697153920365b76b0ab81660-senior-software-engineer---us-remote?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Built In",
+    "link":
+    "https://builtin.com/job/senior-software-engineer-us-remote/8267473?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Jobright",
+    "link":
+    "https://jobright.ai/jobs/info/69714de1333b6343a14dd2b3?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Remote Jobs USA",
+    "link":
+    "https://cozydesk.mysmartpros.com/job/1070323?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Adzuna",
+    "link":
+    "https://www.adzuna.com/details/5597320463?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIgLSBVUyBSZW1vdGUiLCJjb21wYW55X25hbWUiOiIxMDAwMTkgRGlnaXRhbCBSZWNvZ25pdGlvbiBOZXR3b3JrLCBJbmMiLCJhZGRyZXNzX2NpdHkiOiJVbml0ZWQgU3RhdGVzIiwiaHRpZG9jaWQiOiJLcUxKLUg3TXZKbUQ3TTVmQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJTlZXNXBkR1ZrSUZOMFlYUmxjdyIsImdsIjoidXMiLCJobCI6ImVuIn0="
+    },
+    {
+    "title":
+    "Senior Software Engineer (AI-Enhanced Development Lead)",
+    "company_name":
+    "Oracle",
+    "location":
+    "United States",
+    "via":
+    "Oracle Careers",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=J5lZ2JqIVWtv6TS6AAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xWNMQrCMBRAce0FBKc_qtBGBBedBIsogmBxLmn6TSLp_yEJ2tHzuHgnT2Jd3vCG97L3KLtUSJbD9_Wp-JaeMiCUpC0h_t10e8hLMpIUtrDDBzr2HVKCE8p2BjkcuYGIMigDTLBn1g4nG5OSj2shYnSFjkkmqwrFnWDChntx5yb-UUcz_LyTCevlatEXnvR8fA5SOQRLcCWbhm81BDD-ANVL3o6tAAAA&shmds=v1_ATWGeeMiTHY6bznGkPnJKduAL-d24EQpiI6rHhx1Lg7b-ZTWWQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=J5lZ2JqIVWtv6TS6AAAAAA%3D%3D",
+    "extensions":
+    [
+    "4 days ago",
+    "Full-time",
+    "No degree mentioned"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "4 days ago",
+    "schedule_type":
+    "Full-time",
+    "qualifications":
+    "No degree mentioned"
+    },
+    "description":
+    "Senior Software Engineer - AI-Enhanced Development Lead
+    
+    Location: United States
+    
+    No visa sponsorship is available for this position.
+    
+    We are looking for a senior level Software Engineer who will champion the use of Artificial Intelligence across the entire software development lifecycle. In this role you will help guide a globally distributed development team in leveraging AI driven tools and techniques to accelerate design, coding, testing, deployment, and operations while preserving the rigor required for a highly regulated, mission critical financial services platform for higher education.
+    
+    You will work on a large, mature enterprise backend that powers student financial aid management for universities in the United States. The system runs in a strict regulatory environment and has deep, complex business logic. Your mission is to modernize the way we build and sustain this platform by introducing AI assisted practices that add real, measurable value—speed, quality, compliance, and maintainability—without compromising safety or reliability.
+    
+    What You’ll Do
+    
+    • Help define a roadmap for AI adoption across all phases of the software lifecycle (requirements, design, implementation, testing, observability, incident response).
+    
+    • Evaluate, pilot, and scale AI enabled tools (e.g., large language model code assistants, test case generation, performance tuning bots, security analysis agents).
+    
+    • Help set policies and guardrails for responsible AI usage.
+    
+    • Design and extend core services using Java 17+, Spring Boot, Hibernate, and Helidon.
+    
+    • Refactor legacy components to be AI friendly (e.g., adding rich documentation, type safe APIs, modular boundaries).
+    
+    • Help the team in integrating AI assisted IDE extensions, pair programming bots, and code review assistants.
+    
+    • Assist with establishing best practice guidelines for when and how to rely on AI generated code, ensuring human validation and auditability.
+    
+    • Deploy AI driven test case generation, mutation testing, and automated exploratory testing.
+    
+    • Use AI to predict flaky tests, prioritize test execution, and automatically generate test data sets.
+    
+    • Incorporate AI powered pipeline optimizations (e.g., smart build caching, failure root cause analysis, deployment risk scoring).
+    
+    • Automate intelligent rollback decisions and anomaly detection using observability AI.
+    
+    • Foster a data driven, continuous learning culture where AI is seen as a collaborative teammate, not a replacement.
+    
+    • Work with Oracle Security teams to guarantee AI tooling respects data privacy, regulatory, and security constraints.
+    
+    • Conduct regular AI risk assessments and integrate findings into the software security assurance process.
+    
+    • Communicate effectively with product owners, architects, and senior stakeholders across time zones (Slack, Zoom, async docs).
+    
+    • Participate in Kanban ceremonies, code reviews, and architecture boards, bringing AI centric perspectives to each.
+    
+    Core Stack & Environment
+    
+    Languages & Frameworks: Java 17+, Spring Framework & Spring Boot, Hibernate, Helidon (plus exposure to emerging AI centric frameworks)
+    
+    Containers & Orchestration: Kubernetes (Helm, Operators)
+    
+    Databases: Oracle, MySQL (AI assisted query tuning, automated schema evolution)
+    
+    Build & Tooling: Maven, IntelliJ IDEA, Git, Jenkins (AI enhanced pipelines)
+    
+    Testing: JUnit, Cucumber/BDD, AI generated test scaffolding, mutation testing tools
+    
+    Collaboration: Remote first, globally distributed team, async workflow, strong emphasis on documentation
+    
+    What We’re Looking For
+    
+    • Java Mastery | 7+ years of production Java development, deep knowledge of the Spring ecosystem.
+    
+    • AI Tooling Savvy
+    
+    • Proven experience experimenting with LLM based code assistants (e.g., GitHub Copilot, OpenAI, Claude, or internal Oracle AI tools).
+    
+    • Experience can be from personal projects, POCs, or enterprise pilots.
+    
+    • Systems Thinking
+    
+    • Ability to navigate large, legacy codebases and design modular, AI compatible components.
+    
+    • Regulated Domain Acumen
+    
+    • Familiarity with compliance heavy environments (e.g., FERPA, GDPR, financial data handling).
+    
+    • Leadership & Influence
+    
+    • Demonstrated mentorship, evangelism, and the ability to drive cross team adoption of new practices.
+    
+    • Strong Communication
+    
+    • Clear, concise English (written and spoken); capable of influencing senior stakeholders and remote teams.
+    
+    • Automation & DevOps
+    
+    • Experience with CI/CD pipelines; enthusiasm for AI driven automation in build, test, and release stages.
+    
+    • Quality Mindset
+    
+    • Passion for automated testing, code quality, and continuous improvement.
+    
+    • Curiosity & Pragmatism | Willingness to experiment with emerging AI tech but also the discipline to reject it when the ROI isn’t clear.
+    
+    • Formal AI expertise (e.g., ML research, data science) is not required—what matters is the ability to evaluate, adopt, and champion AI tools responsibly.
+    
+    If you’re a seasoned Java engineer who is excited about helping to lead the AI transformation of a mission critical enterprise platform—and you thrive in a collaborative, remote first environment—this is the role for you. Bring your engineering depth, curiosity, and pragmatic AI mindset, and help us set a new standard for intelligent software development.",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "Languages & Frameworks: Java 17+, Spring Framework & Spring Boot, Hibernate, Helidon (plus exposure to emerging AI centric frameworks)",
+    "Java Mastery | 7+ years of production Java development, deep knowledge of the Spring ecosystem",
+    "AI Tooling Savvy",
+    "Proven experience experimenting with LLM based code assistants (e.g., GitHub Copilot, OpenAI, Claude, or internal Oracle AI tools)",
+    "Experience can be from personal projects, POCs, or enterprise pilots",
+    "Systems Thinking",
+    "Ability to navigate large, legacy codebases and design modular, AI compatible components",
+    "Regulated Domain Acumen",
+    "Familiarity with compliance heavy environments (e.g., FERPA, GDPR, financial data handling)",
+    "Leadership & Influence",
+    "Demonstrated mentorship, evangelism, and the ability to drive cross team adoption of new practices",
+    "Strong Communication",
+    "Clear, concise English (written and spoken); capable of influencing senior stakeholders and remote teams",
+    "Automation & DevOps",
+    "Experience with CI/CD pipelines; enthusiasm for AI driven automation in build, test, and release stages",
+    "Quality Mindset",
+    "Passion for automated testing, code quality, and continuous improvement",
+    "Curiosity & Pragmatism | Willingness to experiment with emerging AI tech but also the discipline to reject it when the ROI isn’t clear",
+    "Formal AI expertise (e.g., ML research, data science) is not required—what matters is the ability to evaluate, adopt, and champion AI tools responsibly"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "In this role you will help guide a globally distributed development team in leveraging AI driven tools and techniques to accelerate design, coding, testing, deployment, and operations while preserving the rigor required for a highly regulated, mission critical financial services platform for higher education",
+    "You will work on a large, mature enterprise backend that powers student financial aid management for universities in the United States",
+    "Help define a roadmap for AI adoption across all phases of the software lifecycle (requirements, design, implementation, testing, observability, incident response)",
+    "Evaluate, pilot, and scale AI enabled tools (e.g., large language model code assistants, test case generation, performance tuning bots, security analysis agents)",
+    "Help set policies and guardrails for responsible AI usage",
+    "Design and extend core services using Java 17+, Spring Boot, Hibernate, and Helidon",
+    "Refactor legacy components to be AI friendly (e.g., adding rich documentation, type safe APIs, modular boundaries)",
+    "Help the team in integrating AI assisted IDE extensions, pair programming bots, and code review assistants",
+    "Assist with establishing best practice guidelines for when and how to rely on AI generated code, ensuring human validation and auditability",
+    "Deploy AI driven test case generation, mutation testing, and automated exploratory testing",
+    "Use AI to predict flaky tests, prioritize test execution, and automatically generate test data sets",
+    "Incorporate AI powered pipeline optimizations (e.g., smart build caching, failure root cause analysis, deployment risk scoring)",
+    "Automate intelligent rollback decisions and anomaly detection using observability AI",
+    "Foster a data driven, continuous learning culture where AI is seen as a collaborative teammate, not a replacement",
+    "Work with Oracle Security teams to guarantee AI tooling respects data privacy, regulatory, and security constraints",
+    "Conduct regular AI risk assessments and integrate findings into the software security assurance process",
+    "Communicate effectively with product owners, architects, and senior stakeholders across time zones (Slack, Zoom, async docs)",
+    "Participate in Kanban ceremonies, code reviews, and architecture boards, bringing AI centric perspectives to each",
+    "Core Stack & Environment",
+    "Containers & Orchestration: Kubernetes (Helm, Operators)",
+    "Databases: Oracle, MySQL (AI assisted query tuning, automated schema evolution)",
+    "Build & Tooling: Maven, IntelliJ IDEA, Git, Jenkins (AI enhanced pipelines)",
+    "Testing: JUnit, Cucumber/BDD, AI generated test scaffolding, mutation testing tools",
+    "Collaboration: Remote first, globally distributed team, async workflow, strong emphasis on documentation"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "Oracle Careers",
+    "link":
+    "https://careers.oracle.com/en/job/323054?utm_medium=search+engine&utm_source=google&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Glassdoor",
+    "link":
+    "https://www.glassdoor.com/job-listing/senior-software-engineer-ai-enhanced-development-lead-oracle-JV_KO0,53_KE54,60.htm?jl=1010005197506&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "WhatJobs",
+    "link":
+    "https://www.whatjobs.com/jobs/deep-learning?id=2411653955&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Adzuna",
+    "link":
+    "https://www.adzuna.com/details/5594663291?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "BeBee",
+    "link":
+    "https://us.bebee.com/job/a2e2f4b762512d74ee5e74a16029c1c8?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Recruit.net",
+    "link":
+    "https://www.recruit.net/job/seniorsoftware-engineer-ai-enhanced-development-jobs/B5C21DCB844A532F?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTZW5pb3LigK9Tb2Z0d2FyZSBFbmdpbmVlcuKAryhBSS1FbmhhbmNlZCBEZXZlbG9wbWVudCBMZWFkKSIsImNvbXBhbnlfbmFtZSI6Ik9yYWNsZSIsImFkZHJlc3NfY2l0eSI6IlVuaXRlZCBTdGF0ZXMiLCJodGlkb2NpZCI6Iko1bFoySnFJVld0djZUUzZBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lOVlc1cGRHVmtJRk4wWVhSbGN3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ=="
+    },
+    {
+    "title":
+    "Experienced Software Engineer across a wide array of tech stacks",
+    "company_name":
+    "Infinity Software Development, Inc",
+    "location":
+    "Anywhere",
+    "via":
+    "Indeed",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=RRzmYjQmAW7sv1QgAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_0WOsQ6CQBBEY8snWG1tFIzGRluJwdYYS3KcC5zC7uV2I_CN_pRHZTPF5GXmJd9F8shHj8EhWXzCjWsdTEDIqXGEGMDYwCJgYHBPBBOCmYBrULQtiBr7FtjAlSsQNCF2THBhbjpcnlpVL8csE-nSJrLqbGq5z5iw4jF7cSVzlNLGR98ZxXJ32I6pp2a1L6h25HT6K53xgx37HknXUJAFR3CPyKwdx1F-UtrE9c4AAAA&shmds=v1_ATWGeeMS43vpdbVt_yULZETAXhOUKMl4bg-T4-We_AMj49_LIw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=RRzmYjQmAW7sv1QgAAAAAA%3D%3D",
+    "thumbnail":
+    "https://serpapi.com/searches/6974564ca3882d01b6bb90e7/images/bb82471ee6283b5f8f86e567888da79a2d91ee9c1a7239b0c2a2768ae03b9442.jpeg",
+    "extensions":
+    [
+    "4 days ago",
+    "80K–125K a year",
+    "Work from home",
+    "Full-time",
+    "No degree mentioned",
+    "Paid time off",
+    "Dental insurance",
+    "Health insurance"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "4 days ago",
+    "salary":
+    "80K–125K a year",
+    "work_from_home":
+    true,
+    "schedule_type":
+    "Full-time",
+    "qualifications":
+    "No degree mentioned",
+    "paid_time_off":
+    true,
+    "dental_coverage":
+    true,
+    "health_insurance":
+    true
+    },
+    "description":
+    "Come help us build modern custom solutions for our growing book of business!
+    
+    We’re looking for engineers who have experience across multiple technologies and have a passion for software development. It’s ok if you are more comfortable working on the front-end or back-end, but you should have at least some experience on both sides. If you are looking to join a fun team to tackle hard projects, with opportunities to learn new stacks, we’d love to talk to you.
+    
+    There are no specific technology requirements for this role, but a number of our current projects are using: C#, TypeScript, .NET Core, React, Redux, Angular, Node, Vue, MVC, Swift, Kotlin, Docker, AWS, Azure, Microservices, SQL Server, Oracle, MongoDB.
+    
+    Plate spinning is a highly desirable skill, as well.
+    
+    We are open to US-based remote candidates only with a minimum of 5 years of recent software development experience.
+    
+    Infinity Software Development is a custom software development shop that has been delivering tailored technology solutions to our clients all over the country for over 30 years. We like working with people who love solving problems, who work hard, and have a little fun in the process.
+    
+    https://www.infinity-software.com/careers
+    
+    Job Type: Full-time
+    
+    Pay: $80,000.00 - $125,000.00 per year
+    
+    Benefits:
+    • 401(k)
+    • Dental insurance
+    • Employee assistance program
+    • Health insurance
+    • Life insurance
+    • Paid time off
+    • Vision insurance
+    
+    Work Location: Remote",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "We’re looking for engineers who have experience across multiple technologies and have a passion for software development",
+    "It’s ok if you are more comfortable working on the front-end or back-end, but you should have at least some experience on both sides",
+    "There are no specific technology requirements for this role, but a number of our current projects are using: C#, TypeScript, .NET Core, React, Redux, Angular, Node, Vue, MVC, Swift, Kotlin, Docker, AWS, Azure, Microservices, SQL Server, Oracle, MongoDB",
+    "We are open to US-based remote candidates only with a minimum of 5 years of recent software development experience"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "Pay: $80,000.00 - $125,000.00 per year",
+    "401(k)",
+    "Dental insurance",
+    "Employee assistance program",
+    "Health insurance",
+    "Life insurance",
+    "Paid time off",
+    "Vision insurance",
+    "Work Location: Remote"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "Indeed",
+    "link":
+    "https://www.indeed.com/viewjob?jk=c1c3d5f315569640&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Remote Jobs USA - Remotenow.mysmartprosnetwfh",
+    "link":
+    "https://remotenow.mysmartpros.com/job/898042?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Remote Jobs USA",
+    "link":
+    "https://stayathomemomjobs.net/job/898042?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "BeBee",
+    "link":
+    "https://us.bebee.com/job/b02ed9c3a7cc48b8d0b0ef74d6a11bac?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Mail Delivery Operator",
+    "link":
+    "https://briskglim.net/job/929336?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Neatspark.net",
+    "link":
+    "https://neatspark.net/job/929336?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJFeHBlcmllbmNlZCBTb2Z0d2FyZSBFbmdpbmVlciBhY3Jvc3MgYSB3aWRlIGFycmF5IG9mIHRlY2ggc3RhY2tzIiwiY29tcGFueV9uYW1lIjoiSW5maW5pdHkgU29mdHdhcmUgRGV2ZWxvcG1lbnQsIEluYyIsImFkZHJlc3NfY2l0eSI6IlVuaXRlZCBTdGF0ZXMiLCJodGlkb2NpZCI6IlJSem1ZalFtQVc3c3YxUWdBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lOVlc1cGRHVmtJRk4wWVhSbGN3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ=="
+    },
+    {
+    "title":
+    "Software Engineer-Intern",
+    "company_name":
+    "Lockheed Martin",
+    "location":
+    "Littleton, CO",
+    "via":
+    "Lockheed Martin Careers",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=S8d6lYVIMCDGlbQBAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMMQoCMRBAUWz3CFZTi5uIYKOliCgrFh5gycYxicaZkBlwj-GRXeHzyt98Z4298UM_riIcKCRCrO2JFCtBC2ceQNBVH4EJjswh43wXVYtsrRXJJog6Td54flsmHHi0Tx7kTy9xupbsFPv1ZjWaQmEBHftXRLzDxVVNBFNdUs2oTEvYX3_MoaTWkwAAAA&shmds=v1_ATWGeeNzsQexVoxkAI8Xt1TmtR38lmAi5ZK7AfKNixCF9U58uw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=S8d6lYVIMCDGlbQBAAAAAA%3D%3D",
+    "extensions":
+    [
+    "4 days ago",
+    "Internship",
+    "Paid time off",
+    "Dental insurance",
+    "Health insurance"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "4 days ago",
+    "schedule_type":
+    "Internship",
+    "paid_time_off":
+    true,
+    "dental_coverage":
+    true,
+    "health_insurance":
+    true
+    },
+    "description":
+    "Description:By bringing together people that use their passion for purposeful innovation, at Lockheed Martin we keep people safe and solve the world's most complex challenges. Our people are some of the greatest minds in the industry and truly make Lockheed Martin a great place to work.
+    
+    With our employees as our priority, we provide diverse career opportunities designed to propel development and boost agility. Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work.
+    
+    At Lockheed Martin, we place an emphasis on empowering our employees by fostering innovation, integrity, and exemplifying the epitome of corporate responsibility. Your Mission is Ours.
+    
+    Lockheed Martin Rotary and Mission Systems in Littleton, CO is seeking a Software Engineer Intern. In this role, you will be part of a dynamic and diverse team on a recurring multi-year, critical program within C4ISR. You will be on the leading edge, solving problems, developing crucial design features, and contributing to our mission critical software within a multi-discipline team and dynamic Agile environment.
+    
+    Applicants must be a US Citizen; this position will require a government security clearance. This position is located at a facility that requires special access.
+    Basic Qualifications:
+    - Bachelor's degree in Computer Science/Math/Engineering/Science from an accredited college, or equivalent experience/combined education
+    -Pursuing Master's degree
+    - Strong interpersonal skills
+    - Experience developing object-oriented software utilizing C++, C#, or Java
+    - Experience with Linux/Unix based systems- Must be a US Citizen; this position will require a government security clearance. This position is located at a facility that requires special access.
+    Desired Skills:
+    - Familiarity with Agile development tools and methodologies
+    - Familiarity with software development best practices
+    - Familiarity with unit testing (e.g. GTest, Junit, Jmockit)
+    - Familiarity with networking (layer 2, layer 3, cisco switches, routing) and network programming (TCP, UDP, IPC)
+    - Excellent written and verbal communication skills
+    - Self-motivated team player with a strong work ethic who can work both independently and as part of a team
+    - Proficient with Microsoft Office
+    Security Clearance Statement: This position requires a government security clearance, you must be a US Citizen for consideration.
+    Clearance Level: Top Secret
+    Other Important Information You Should Know
+    Expression of Interest: By applying to this job, you are expressing interest in this position and could be considered for other career opportunities where similar skills and requirements have been identified as a match. Should this match be identified you may be contacted for this and future openings.
+    Ability to Work Remotely: Onsite Full-time: The work associated with this position will be performed onsite at a designated Lockheed Martin facility.
+    Work Schedules: Lockheed Martin supports a variety of alternate work schedules that provide additional flexibility to our employees. Schedules range from standard 40 hours over a five day work week while others may be condensed. These condensed schedules provide employees with additional time away from the office and are in addition to our Paid Time off benefits.
+    Schedule for this Position: 4x10 hour day, 3 days off per week
+    Pay Rate: The annual base salary range for this position in California, Massachusetts, and New York (excluding most major metropolitan areas), Colorado, Hawaii, Illinois, Maryland, Minnesota, New Jersey, Vermont, Washington or Washington DC is $31,616 - $77,788. For states not referenced above, the salary range for this position will reflect the candidate’s final work location. Please note that the salary information is a general guideline only. Lockheed Martin considers factors such as (but not limited to) scope and responsibilities of the position, candidate's work experience, education/ training, key skills as well as market and business considerations when extending an offer.
+    Benefits offered: Medical, Dental, Vision, Life Insurance, Short-Term Disability, Long-Term Disability, 401(k) match, Flexible Spending Accounts, EAP, Education Assistance, Parental Leave, Paid time off, and Holidays.
+    (Washington state applicants only) Non-represented full-time employees: accrue at least 10 hours per month of Paid Time Off (PTO) to be used for incidental absences and other reasons; receive at least 90 hours for holidays. Represented full time employees accrue 6.67 hours of Vacation per month; accrue up to 52 hours of sick leave annually; receive at least 96 hours for holidays. PTO, Vacation, sick leave, and holiday hours are prorated based on start date during the calendar year.
+    Lockheed Martin is an equal opportunity employer. Qualified candidates will be considered without regard to legally protected characteristics.
+    The application window will close in 90 days; applicants are encouraged to apply within 5 - 30 days of the requisition posting date in order to receive optimal consideration.
+    At Lockheed Martin, we use our passion for purposeful innovation to help keep people safe and solve the world's most complex challenges. Our people are some of the greatest minds in the industry and truly make Lockheed Martin a great place to work.
+    
+    With our employees as our priority, we provide diverse career opportunities designed to propel, develop, and boost agility. Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work. We place an emphasis on empowering our employees by fostering an inclusive environment built upon integrity and corporate responsibility.
+    
+    If this sounds like a culture you connect with, you’re invited to apply for this role. Or, if you are unsure whether your experience aligns with the requirements of this position, we encourage you to search on Lockheed Martin Jobs, and apply for roles that align with your qualifications.
+    Experience Level: Co-op/Summer Intern
+    Business Unit: RMS
+    Relocation Available: Possible
+    Career Area: Software Engineering
+    Type: Part-Time
+    Shift: First",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "Applicants must be a US Citizen; this position will require a government security clearance",
+    "Bachelor's degree in Computer Science/Math/Engineering/Science from an accredited college, or equivalent experience/combined education",
+    "Pursuing Master's degree",
+    "Strong interpersonal skills",
+    "Experience developing object-oriented software utilizing C++, C#, or Java",
+    "Experience with Linux/Unix based systems- Must be a US Citizen; this position will require a government security clearance",
+    "This position is located at a facility that requires special access",
+    "GTest, Junit, Jmockit)",
+    "Familiarity with networking (layer 2, layer 3, cisco switches, routing) and network programming (TCP, UDP, IPC)",
+    "Excellent written and verbal communication skills",
+    "Self-motivated team player with a strong work ethic who can work both independently and as part of a team",
+    "Proficient with Microsoft Office",
+    "Security Clearance Statement: This position requires a government security clearance, you must be a US Citizen for consideration",
+    "Experience Level: Co-op/Summer Intern"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work",
+    "Schedules range from standard 40 hours over a five day work week while others may be condensed",
+    "These condensed schedules provide employees with additional time away from the office and are in addition to our Paid Time off benefits",
+    "Pay Rate: The annual base salary range for this position in California, Massachusetts, and New York (excluding most major metropolitan areas), Colorado, Hawaii, Illinois, Maryland, Minnesota, New Jersey, Vermont, Washington or Washington DC is $31,616 - $77,788",
+    "Benefits offered: Medical, Dental, Vision, Life Insurance, Short-Term Disability, Long-Term Disability, 401(k) match, Flexible Spending Accounts, EAP, Education Assistance, Parental Leave, Paid time off, and Holidays",
+    "(Washington state applicants only) Non-represented full-time employees: accrue at least 10 hours per month of Paid Time Off (PTO) to be used for incidental absences and other reasons; receive at least 90 hours for holidays",
+    "Represented full time employees accrue 6.67 hours of Vacation per month; accrue up to 52 hours of sick leave annually; receive at least 96 hours for holidays",
+    "PTO, Vacation, sick leave, and holiday hours are prorated based on start date during the calendar year",
+    "Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work",
+    "Relocation Available: Possible"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "In this role, you will be part of a dynamic and diverse team on a recurring multi-year, critical program within C4ISR",
+    "You will be on the leading edge, solving problems, developing crucial design features, and contributing to our mission critical software within a multi-discipline team and dynamic Agile environment",
+    "Schedule for this Position: 4x10 hour day, 3 days off per week"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "Lockheed Martin Careers",
+    "link":
+    "https://www.lockheedmartinjobs.com/job/littleton/software-engineer-intern/694/90805143952?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Glassdoor",
+    "link":
+    "https://www.glassdoor.com/job-listing/software-engineer-intern-lockheed-martin-JV_IC1148194_KO0,24_KE25,40.htm?jl=1010005420958&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "LinkedIn",
+    "link":
+    "https://www.linkedin.com/jobs/view/software-engineer-intern-at-jobs-via-dice-4321375243?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Dice",
+    "link":
+    "https://www.dice.com/job-detail/e42cb900-2b1b-4079-bf66-45c865e25ca4?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "SimplyHired",
+    "link":
+    "https://www.simplyhired.com/job/Fr1qhfdrGBM_5e_Vyg3zE9PtJiNfbB4_w2tRKzldLIgIc0Q3qiEQZg?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "JOBSwithDOD",
+    "link":
+    "https://jobswithdod.com/defense-company-jobs/software-engineer-intern-9/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "WhatJobs",
+    "link":
+    "https://www.whatjobs.com/jobs/software-engineer-intern?id=2413876121&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "JobMonkey Jobs",
+    "link":
+    "https://www.jobmonkeyjobs.com/career/27375542/Software-Engineer-Intern-Colorado-Littleton-1301?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlci1JbnRlcm4iLCJjb21wYW55X25hbWUiOiJMb2NraGVlZCBNYXJ0aW4iLCJhZGRyZXNzX2NpdHkiOiJMaXR0bGV0b24sIENPIiwiaHRpZG9jaWQiOiJTOGQ2bFlWSU1DREdsYlFCQUFBQUFBPT0iLCJ1dWxlIjoidytDQUlRSUNJTlZXNXBkR1ZrSUZOMFlYUmxjdyIsImdsIjoidXMiLCJobCI6ImVuIn0="
+    },
+    {
+    "title":
+    "2026 Intern - Software Engineer Intern - Onsite (CO)",
+    "company_name":
+    "RTX",
+    "location":
+    "Aurora, CO",
+    "via":
+    "RTX - Careers",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=Ci5mwvELthrKW_8gAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_0WNMQrCQBAAsU1na7WliuZCwBRaSRBRi4Ba2IVLWC8ncTfcrpjP-FdjZTMwTDHRZxSd0iTN4ECKgWAJF77r2waEHTlPiOGfChKvCNO8mA125AoEbagbYII9s2txsmlUO1kbI9LGTtSqr-Oan4YJK-7Ngyv5oZRmeHStVSzTVdLHHbn5-Hy9gSfYvgIHu4C8-AIYFSploAAAAA&shmds=v1_ATWGeeMlpg_NeQNhqPiOkauCVN_WPGi6k3lOTxZtFk--2d7Ubg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=Ci5mwvELthrKW_8gAAAAAA%3D%3D",
+    "thumbnail":
+    "https://serpapi.com/searches/6974564ca3882d01b6bb90e7/images/bb82471ee6283b5f5ae14082564895578b300dd5c0f686e0a6e682826359c399.png",
+    "extensions":
+    [
+    "2 days ago",
+    "Full-time",
+    "Paid time off",
+    "Dental insurance",
+    "Health insurance"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "2 days ago",
+    "schedule_type":
+    "Full-time",
+    "paid_time_off":
+    true,
+    "dental_coverage":
+    true,
+    "health_insurance":
+    true
+    },
+    "description":
+    "Date Posted:
+    2026-01-20
+    
+    Country:
+    United States of America
+    
+    Location:
+    US-CO-AURORA-S77 16470 E Hughes Dr BLDG S77
+    
+    Position Role Type:
+    Onsite
+    
+    U.S. Citizen, U.S. Person, or Immigration Status Requirements:
+    Active and transferable U.S. government issued security clearance is required prior to start date.​ U.S. citizenship is required, as only U.S. citizens are eligible for a security clearance​
+    
+    Security Clearance Type:
+    TS/SCI without Polygraph
+    
+    Security Clearance Status:
+    Active and existing security clearance required on day 1
+    
+    At Raytheon, the foundation of everything we do is rooted in our values and a higher calling – to help our nation and allies defend freedoms and deter aggression. We bring the strength of more than 100 years of experience and renowned engineering expertise to meet the needs of today’s mission and stay ahead of tomorrow’s threat. Our team solves tough, meaningful problems that create a safer, more secure world.
+    
+    Raytheon’s Air & Space Defense Systems (ASDS) strategic business unit (SBU) specializes in multi-domain integrated air and missile defense, advanced sensors, space-based systems, hypersonics, effectors and cyber solutions. Focused on program execution, business growth and the highest level of customer satisfaction, the ASDS team provides customers with unmatched capabilities of detection and sensing, command and control, and air-to-air, air-to-surface, and surface-to-air munitions to accomplish air, space and missile defense missions. Within ASDS, Space Intelligence, Surveillance & Reconnaissance is our Sub-SBU that delivers information superiority from space, multi-mission automation and orchestration, multiple intelligence (Multi-INT) and resilient operations, secure processing, and data management.
+    
+    Raytheon is currently hiring for software engineering interns during the Summer of 2026. Interns typically work on satellite ground systems and related software projects. Some previous activities in these positions have involved implementing AI/ML processing tools, developing software algorithms, modeling complex satellite systems, simulating systems to understand mission performance, performing system trade studies, improving software efficiency, and developing production software as part of an Agile software development team.
+    
+    What You Will Do
+    • Design, develop, test, deliver, and maintain software for cutting-edge satellite ground systems
+    • Research advanced software technologies
+    • Work with talented teams of engineers, architects, and leaders in an Agile environment
+    
+    What You Will Learn
+    • A breadth of advanced software technologies and techniques including multi-tiered architecture, AWS web services, and microservice software design
+    • Modern DevSecOps and Continuous Integration/Continuous Delivery techniques
+    • Software lifecycle practices for large-scale defense project
+    • Satellite ground system technologies
+    
+    Qualifications You Must Have
+    • Must be a Sophomore, Junior, Senior or Post-Graduate by the start of Summer 2026 in Computer Science or related Science, Technology, Engineering or Mathematics (STEM) major
+    • Experience developing object-oriented software using C++ or Java
+    • Ability to troubleshoot software errors and provide fixes
+    • The ability to obtain and maintain a U.S. government issued TS/SCI security clearance is required. U.S. citizenship is required, as only U.S. citizens are eligible for a security clearance.
+    
+    Qualifications We Prefer
+    • Experience with Agile development
+    • Experience developing software using Python
+    • Experience working with applications in the AWS Cloud
+    • Experience with microservices, Docker, Kubernetes, and containerized applications
+    • Excellent verbal and written communication skills
+    
+    What We Offer
+    
+    Our values drive our actions, behaviors, and performance with a vision for a safer, more connected world. At RTX we value, Safety, Trust, Respect, Accountability, Collaboration, and Innovation.
+    
+    Learn More & Apply Now!  
+    
+    Please consider the following role type definition as you apply for this role.
+    • Onsite: Employees who are working in Onsite roles will work primarily onsite. This includes all production and maintenance employees, as they are essential to the development of our products.  
+    • Please upload a copy of your most recent transcripts with your resume when applying to this requisition. Include your cumulative GPA and projected graduation date on your resume.
+    • Relocation Eligible – Relocation assistance available 
+    • This position requires a security clearance. DCSA Consolidated Adjudication Services (DCSA CAS), an agency of the Department of Defense, handles and adjudicates the security clearance process. More information about Security Clearances can be found on the US Department of State government website here: https://www.state.gov/m/ds/clearances/c10978.htm
+    • Location information: Aurora, CO
+    
+    As part of our commitment to maintaining a secure hiring process, candidates may be asked to attend select steps of the interview process in-person at one of our office locations, regardless of whether the role is designated as on-site, hybrid or remote.
+    
+    The salary range for this role is 37,000 USD - 82,000 USD. The salary range provided is a good faith estimate representative of all experience levels. RTX considers several factors when extending an offer, including but not limited to, the role, function and associated responsibilities, a candidate’s work experience, location, education/training, and key skills.
+    
+    Hired applicants may be eligible for benefits, including but not limited to, medical, dental, vision, life insurance, short-term disability, long-term disability, 401(k) match, flexible spending accounts, flexible work schedules, employee assistance program, Employee Scholar Program, parental leave, paid time off, and holidays. Specific benefits are dependent upon the specific business unit as well as whether or not the position is covered by a collective-bargaining agreement.
+    
+    Hired applicants may be eligible for annual short-term and/or long-term incentive compensation programs depending on the level of the position and whether or not it is covered by a collective-bargaining agreement. Payments under these annual programs are not guaranteed and are dependent upon a variety of factors including, but not limited to, individual performance, business unit performance, and/or the company’s performance.
+    
+    This role is a U.S.-based role. If the successful candidate resides in a U.S. territory, the appropriate pay structure and benefits will apply.
+    
+    RTX anticipates the application window closing approximately 40 days from the date the notice was posted. However, factors such as candidate flow and business necessity may require RTX to shorten or extend the application window.
+    
+    RTX is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability or veteran status, or any other applicable state or federal protected class. RTX provides affirmative action in employment for qualified Individuals with a Disability and Protected Veterans in compliance with Section 503 of the Rehabilitation Act and the Vietnam Era Veterans’ Readjustment Assistance Act.
+    
+    Privacy Policy and Terms:
+    
+    Click on this link to read the Policy and Terms",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "Active and transferable U.S. government issued security clearance is required prior to start date.​ U.S. citizenship is required, as only U.S. citizens are eligible for a security clearance​",
+    "TS/SCI without Polygraph",
+    "Active and existing security clearance required on day 1",
+    "A breadth of advanced software technologies and techniques including multi-tiered architecture, AWS web services, and microservice software design",
+    "Modern DevSecOps and Continuous Integration/Continuous Delivery techniques",
+    "Must be a Sophomore, Junior, Senior or Post-Graduate by the start of Summer 2026 in Computer Science or related Science, Technology, Engineering or Mathematics (STEM) major",
+    "Experience developing object-oriented software using C++ or Java",
+    "Ability to troubleshoot software errors and provide fixes",
+    "The ability to obtain and maintain a U.S. government issued TS/SCI security clearance is required",
+    "U.S. citizenship is required, as only U.S. citizens are eligible for a security clearance",
+    "Qualifications We Prefer",
+    "Experience with Agile development",
+    "Experience developing software using Python",
+    "Experience working with applications in the AWS Cloud",
+    "Experience with microservices, Docker, Kubernetes, and containerized applications",
+    "Excellent verbal and written communication skills",
+    "Include your cumulative GPA and projected graduation date on your resume",
+    "This position requires a security clearance"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "The salary range provided is a good faith estimate representative of all experience levels",
+    "Hired applicants may be eligible for benefits, including but not limited to, medical, dental, vision, life insurance, short-term disability, long-term disability, 401(k) match, flexible spending accounts, flexible work schedules, employee assistance program, Employee Scholar Program, parental leave, paid time off, and holidays",
+    "Specific benefits are dependent upon the specific business unit as well as whether or not the position is covered by a collective-bargaining agreement",
+    "Hired applicants may be eligible for annual short-term and/or long-term incentive compensation programs depending on the level of the position and whether or not it is covered by a collective-bargaining agreement",
+    "Payments under these annual programs are not guaranteed and are dependent upon a variety of factors including, but not limited to, individual performance, business unit performance, and/or the company’s performance"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "Design, develop, test, deliver, and maintain software for cutting-edge satellite ground systems",
+    "Research advanced software technologies",
+    "Work with talented teams of engineers, architects, and leaders in an Agile environment",
+    "Software lifecycle practices for large-scale defense project",
+    "Satellite ground system technologies",
+    "Onsite: Employees who are working in Onsite roles will work primarily onsite",
+    "This includes all production and maintenance employees, as they are essential to the development of our products.  ",
+    "Relocation Eligible – Relocation assistance available "
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "RTX - Careers",
+    "link":
+    "https://careers.rtx.com/global/en/job/01817134/2026-Intern-Software-Engineer-Intern-Onsite-CO?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Jobs At Northrop Grumman",
+    "link":
+    "https://jobs.northropgrumman.com/careers/job/1340068332655-2026-software-engineer-intern-aurora-co-united-states-colorado-aurora?domain=ngc.com&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "ZipRecruiter",
+    "link":
+    "https://www.ziprecruiter.com/c/Raytheon/Job/2026-Intern-Software-Engineer-Intern-Onsite-(CO)/-in-Aurora,CO?jid=af3089b81fed179b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Security Clearance Jobs",
+    "link":
+    "https://www.clearancejobs.com/jobs/8697127/2026-intern-software-engineer-intern-onsite-co?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "LocalJobs.com",
+    "link":
+    "https://www.localjobs.com/job/aurora-co-2026-software-engineer-intern-aurora-co?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Indeed",
+    "link":
+    "https://www.indeed.com/viewjob?jk=d56e5383272e4bfe&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "LinkedIn",
+    "link":
+    "https://www.linkedin.com/jobs/view/2026-intern-software-engineer-intern-onsite-co-at-raytheon-4365015807?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Fairygodboss",
+    "link":
+    "https://fairygodboss.com/jobs/northropgrumman/2026-software-engineer-intern-aurora-co-454fa7de1d599e63b649bd4aad772535?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiIyMDI2IEludGVybiAtIFNvZnR3YXJlIEVuZ2luZWVyIEludGVybiAtIE9uc2l0ZSAoQ08pIiwiY29tcGFueV9uYW1lIjoiUlRYIiwiYWRkcmVzc19jaXR5IjoiQXVyb3JhLCBDTyIsImh0aWRvY2lkIjoiQ2k1bXd2RUx0aHJLV184Z0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSU5WVzVwZEdWa0lGTjBZWFJsY3ciLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    },
+    {
+    "title":
+    "Software Engineer II, Backend",
+    "company_name":
+    "Coursera",
+    "location":
+    "United States",
+    "via":
+    "Coursera Careers",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=WuklRxvqhDVMdXJ7AAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMMQ7CMAwAQLH2BzB5RpAgBAvdQAiVtWKu0tSkgWJHsRF9BW-mLDde8Z0Vu5rv-nEZ4UwhEmKGqlrB0fknUgdruHILgi77HpjgwhwGXJS9apKDtSKDCaJOozeeX5YJWx7tg1v500g_1Wlwis12vxlNorCcn_idBbODSHCjqNhBPRUoP8hYYTaRAAAA&shmds=v1_ATWGeeOsKofqHIlO_RFnGVbdU-qCXnddZGkr_Vhks93mqJin3Q&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=WuklRxvqhDVMdXJ7AAAAAA%3D%3D",
+    "thumbnail":
+    "https://serpapi.com/searches/6974564ca3882d01b6bb90e7/images/bb82471ee6283b5ff7792d96b0956016036da59c5cf46fb829748cbcfaee64ce.png",
+    "extensions":
+    [
+    "Full-time",
+    "No degree mentioned",
+    "Health insurance"
+    ],
+    "detected_extensions":
+    {
+    "schedule_type":
+    "Full-time",
+    "qualifications":
+    "No degree mentioned",
+    "health_insurance":
+    true
+    },
+    "description":
+    "About Coursera
+    
+    Coursera was founded in 2012 by Stanford professors Andrew Ng and Daphne Koller to make world-class learning accessible to everyone, everywhere. Today, over 190 million learners and 375+ university and industry partners use our platform to gain skills in fields like AI, data science, technology, and business. As a Delaware public benefit corporation and Certified B Corp, we’re driven by the belief that learning can transform lives through learning.
+    
+    Why Join Us
+    
+    At Coursera, we’re looking for inventors, innovators, and lifelong learners ready to shape the future of education. You’ll help build global programs and tools that power online learning for millions turning bold ideas into real impact. People who thrive here are customer-first builders who move fast, simplify ruthlessly, and iterate relentlessly on the metrics that matter.
+    
+    We’re a globally distributed team and let you choose the best way you work, whether it's from home, a Coursera hub, or a co-working space near you. Our virtual hiring and onboarding make it easy to join us and start making an impact from anywhere. If you’re ready to make a global impact, scale unique products exclusive to Coursera, and expand your career horizons, apply below.
+    
+    Job Overview:
+    
+    As a Backend Engineer, you’ll have a real opportunity to innovate, productize, and iterate at start-up speed. In this role, you’ll take up significant technical ownership for Coursera in these areas: service architecture, product API development, data modeling, and more. Our backend developers mostly work with modern Java (16+), MySQL, DynamoDB, gRPC, GraphQL (DGS), Kafka, and more within a microservices architecture.
+    
+    Responsibilities:
+    • Design and implement scalable systems and infrastructures
+    • Measure your work thoroughly, analyze results, and generate hypotheses to drive new product changes through A/B testing
+    • Setup monitoring and testing of your APIs and services to better understand real time health of your products
+    
+    Qualifications:
+    • 3+ years of experience working in a relevant software engineering role
+    • Expertise in designing highly-scalable and performant micro-services and storage layers using common frameworks, languages, and infrastructure (e.g. Java, Play/Scala, MySql, Cassandra, Solr, Kafka)
+    • Comfortable working in a fast-moving team environment (we deploy many times a day!)
+    • Data-driven and strongly motivated by success and learnings through experiments and metrics analysis
+    
+    Compensation:
+    
+    This role is available in the following US Pay Zones:
+    
+    Zone 1: This role is not available in Zone 1
+    
+    Zone 2: $137,600 to $172,00
+    
+    Zone 3: This role is not available in Zone 3
+    
+    Zone 4: This role is not available in Zone 4
+    
+    At Coursera, we offer competitive, zone-based pay aligned to your location, experience, and role level across four U.S. pay zones. Our total rewards package goes beyond salary, with comprehensive health and wellness benefits, bonus and RSU equity programs, and global perks designed to help you grow and thrive wherever you are.
+    
+    US Pay Zones:
+    • US-Z1: SF Bay Area
+    • US-Z2: NYC and Seattle Metro
+    • US-Z3: CA, WA, NY, NJ, CO, CT, DC, GA, IL, MA, MD, OR, RI, TX, VA
+    • US-Z4: AK, AZ, DE, FL, HI, ID, IN, IA, KS, KY, MI, MN, MO, MT, NC, NV, NH, OH, OK, PA, SC, TN, UT, VT, WI
+    
+    If this opportunity interests you, you might like these courses on Coursera:
+    • Object Oriented Java Programming: Data Structures and Beyond Specialization
+    • Object Oriented Programming in Java Specialization
+    • Introduction to Programming with Python and Java Specialization
+    • Functional Programming in Scala Specialization
+    
+    Coursera is an Equal Opportunity Employer committed to building a welcoming and inclusive workplace. We consider all qualified applicants without regard to legally protected characteristics and provide reasonable accommodations upon request at accommodations@coursera.org. Learn more in our CCPA Applicant Notice and GDPR Recruitment Notice.",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "3+ years of experience working in a relevant software engineering role",
+    "Expertise in designing highly-scalable and performant micro-services and storage layers using common frameworks, languages, and infrastructure (e.g. Java, Play/Scala, MySql, Cassandra, Solr, Kafka)",
+    "Comfortable working in a fast-moving team environment (we deploy many times a day!)",
+    "Data-driven and strongly motivated by success and learnings through experiments and metrics analysis",
+    "Object Oriented Java Programming: Data Structures and Beyond Specialization",
+    "Object Oriented Programming in Java Specialization",
+    "Introduction to Programming with Python and Java Specialization"
+    ]
+    },
+    {
+    "title":
+    "Benefits",
+    "items":
+    [
+    "This role is available in the following US Pay Zones:",
+    "At Coursera, we offer competitive, zone-based pay aligned to your location, experience, and role level across four U.S. pay zones",
+    "Our total rewards package goes beyond salary, with comprehensive health and wellness benefits, bonus and RSU equity programs, and global perks designed to help you grow and thrive wherever you are"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "As a Backend Engineer, you’ll have a real opportunity to innovate, productize, and iterate at start-up speed",
+    "In this role, you’ll take up significant technical ownership for Coursera in these areas: service architecture, product API development, data modeling, and more",
+    "Our backend developers mostly work with modern Java (16+), MySQL, DynamoDB, gRPC, GraphQL (DGS), Kafka, and more within a microservices architecture",
+    "Design and implement scalable systems and infrastructures",
+    "Measure your work thoroughly, analyze results, and generate hypotheses to drive new product changes through A/B testing",
+    "Setup monitoring and testing of your APIs and services to better understand real time health of your products"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "Coursera Careers",
+    "link":
+    "https://careers.coursera.com/jobs/software-engineer-ii-backend-united-states?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Indeed",
+    "link":
+    "https://www.indeed.com/viewjob?jk=952a88959f82d313&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Wellfound",
+    "link":
+    "https://wellfound.com/jobs/3511614-software-engineer-ii-backend?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "ZipRecruiter",
+    "link":
+    "https://www.ziprecruiter.com/c/Affirm/Job/Software-Engineer-II,-Backend-(Infrastructure)/-in-Remote,US?jid=e33efe36b924be51&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Built In San Francisco",
+    "link":
+    "https://www.builtinsf.com/job/software-engineer-ii-backend-infrastructure/8032144?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Built In NYC",
+    "link":
+    "https://www.builtinnyc.com/job/software-engineer-ii-backend-identity-decisioning/7993350?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Jobgether",
+    "link":
+    "https://jobgether.com/offer/69416d2d52efd6533c0a52be-software-engineer-ii-backend-identity-decisioning?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Built In Chicago",
+    "link":
+    "https://www.builtinchicago.org/job/software-engineer-ii-backend-identity-decisioning/7993350?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTb2Z0d2FyZSBFbmdpbmVlciBJSSwgQmFja2VuZCIsImNvbXBhbnlfbmFtZSI6IkNvdXJzZXJhIiwiYWRkcmVzc19jaXR5IjoiVW5pdGVkIFN0YXRlcyIsImh0aWRvY2lkIjoiV3VrbFJ4dnFoRFZNZFhKN0FBQUFBQT09IiwidXVsZSI6IncrQ0FJUUlDSU5WVzVwZEdWa0lGTjBZWFJsY3ciLCJnbCI6InVzIiwiaGwiOiJlbiJ9"
+    },
+    {
+    "title":
+    "Senior Software Engineer Integrations",
+    "company_name":
+    "talentarchitect.com",
+    "location":
+    "United States",
+    "via":
+    "ZipRecruiter",
+    "share_link":
+    "https://www.google.com/search?ibp=htl;jobs&q=Software+Engineer&htidocid=8sshJkvoAtMjPoVHAAAAAA%3D%3D&hl=en-US&shndl=37&shmd=H4sIAAAAAAAA_xXMsQoCMRAEUGzvE6y2sBJMRLBRWxFtg_WRi2suR9wN2QXvd_xTc83AwMzrfqvu4pASV3D81q-vCFeKiRAr3EkxVq-JSWAHDx5A0NcwAhPcmGPG9XlULXKyViSbKNrWwQT-WCYceLYTD7JEL2OzS_aK_eG4n02huN2oz0i6kEkx6HKERPCkVl_gmobyB4DKr6ykAAAA&shmds=v1_ATWGeePp-8DghsdxLhzc3Xfpqbh2aIuv2CM00DD80EZhKYkdnA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=Software+Engineer&htidocid=8sshJkvoAtMjPoVHAAAAAA%3D%3D",
+    "extensions":
+    [
+    "3 days ago",
+    "Full-time",
+    "No degree mentioned"
+    ],
+    "detected_extensions":
+    {
+    "posted_at":
+    "3 days ago",
+    "schedule_type":
+    "Full-time",
+    "qualifications":
+    "No degree mentioned"
+    },
+    "description":
+    "Senior Software Integration Engineer
+    The Integration Engineer will serve as a core member of the Integrated Program Team (IPT), providing hands-on engineering support for the design, development, and delivery of a federated GraphQL Partner API used to distribute authoritative legislative and member data across the Government (essential).
+    
+    This role is responsible for delivering a production-ready MVP Partner API, while also helping establish the patterns, tooling, and governance standards that will guide all future GraphQL development.
+    
+    Key Responsibilities
+    • Design, implement, and deliver a federated GraphQL API that exposes data from existing IT systems
+    • Develop GraphQL subgraphs using ASP.NET Core and the Hot Chocolate GraphQL framework. Integrate GraphQL federation tooling and participate in architectural decisions supporting schema composition governance, and lifecycle management.
+    • Work within an Agile delivery model, participating fully in sprint planning, backlog grooming, code reviews, and retrospectives.
+    • Collaborate closely with engineers, architects, and contractors to ensure solutions align with existing infrastructure, security, and CI/CD standards.
+    • Implement secure API access using OAuth2 / Entra ID authentication and authorization.
+    • Support CI/CD pipelines using Azure DevOps, containerized builds (Docker), and Helm-based Kubernetes deployments.
+    • Contribute to documentation, training materials, and best practices for GraphQL development, federation, testing, and operations.
+    • Support testing, observability, and performance validation of GraphQL APIs, including schema validation and integration testing.
+    • Ensure compliance with IT configuration management, infrastructure protection, and security policies.
+    Required Qualifications
+    • Senior-level experience as a Software Engineer or Computer Scientist.
+    • Hands-on experience designing and implementing GraphQL APIs in production environments.
+    • Strong experience with .NET / ASP.NET Core microservices.
+    • Familiarity with GraphQL federation concepts, including subgraphs and supergraphs.
+    • Experience working with relational databases (preferably PostgreSQL) as systems of record.
+    • Experience with containerized development and deployment (Docker, Kubernetes).
+    • Experience with CI/CD pipelines, ideally using Azure DevOps.
+    • Ability to work effectively within structured, security-conscious enterprise environments.
+    • Strong communication skills and ability to work within a multi-organization IPT.
+    The Integration Engineer will directly contribute to:
+    • The Federated Partner GraphQL API MVP
+    • Reusable GraphQL patterns, practices, and documentation
+    • Technical inputs to the GraphQL roadmap for future APIs
+    • Training materials and knowledge transfer to staff",
+    "job_highlights":
+    [
+    {
+    "title":
+    "Qualifications",
+    "items":
+    [
+    "NET Core and the Hot Chocolate GraphQL framework",
+    "Senior-level experience as a Software Engineer or Computer Scientist",
+    "Hands-on experience designing and implementing GraphQL APIs in production environments",
+    "Strong experience with .NET / ASP",
+    "NET Core microservices",
+    "Familiarity with GraphQL federation concepts, including subgraphs and supergraphs",
+    "Experience working with relational databases (preferably PostgreSQL) as systems of record",
+    "Experience with containerized development and deployment (Docker, Kubernetes)",
+    "Experience with CI/CD pipelines, ideally using Azure DevOps",
+    "Ability to work effectively within structured, security-conscious enterprise environments",
+    "Strong communication skills and ability to work within a multi-organization IPT"
+    ]
+    },
+    {
+    "title":
+    "Responsibilities",
+    "items":
+    [
+    "The Integration Engineer will serve as a core member of the Integrated Program Team (IPT), providing hands-on engineering support for the design, development, and delivery of a federated GraphQL Partner API used to distribute authoritative legislative and member data across the Government (essential)",
+    "This role is responsible for delivering a production-ready MVP Partner API, while also helping establish the patterns, tooling, and governance standards that will guide all future GraphQL development",
+    "Design, implement, and deliver a federated GraphQL API that exposes data from existing IT systems",
+    "Develop GraphQL subgraphs using ASP",
+    "Integrate GraphQL federation tooling and participate in architectural decisions supporting schema composition governance, and lifecycle management",
+    "Work within an Agile delivery model, participating fully in sprint planning, backlog grooming, code reviews, and retrospectives",
+    "Collaborate closely with engineers, architects, and contractors to ensure solutions align with existing infrastructure, security, and CI/CD standards",
+    "Implement secure API access using OAuth2 / Entra ID authentication and authorization",
+    "Support CI/CD pipelines using Azure DevOps, containerized builds (Docker), and Helm-based Kubernetes deployments",
+    "Contribute to documentation, training materials, and best practices for GraphQL development, federation, testing, and operations",
+    "Support testing, observability, and performance validation of GraphQL APIs, including schema validation and integration testing",
+    "Ensure compliance with IT configuration management, infrastructure protection, and security policies",
+    "The Federated Partner GraphQL API MVP",
+    "Reusable GraphQL patterns, practices, and documentation",
+    "Technical inputs to the GraphQL roadmap for future APIs",
+    "Training materials and knowledge transfer to staff"
+    ]
+    }
+    ],
+    "apply_options":
+    [
+    {
+    "title":
+    "ZipRecruiter",
+    "link":
+    "https://www.ziprecruiter.com/c/talentarchitect.com/Job/Senior-Software-Engineer-Integrations/-in-Remote,US?jid=bc069e48d2fd180e&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Indeed",
+    "link":
+    "https://www.indeed.com/viewjob?jk=d5c7f72afd7d4c5a&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Teal",
+    "link":
+    "https://www.tealhq.com/job/senior-software-engineer-backend-stream-integrations_06d1cdb1-2528-4df8-827d-c79080e936e0?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Glassdoor",
+    "link":
+    "https://www.glassdoor.com/job-listing/senior-software-engineer-integrations-talentarchitect-com-JV_KO0,37_KE38,57.htm?jl=1010005800190&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Remote Rocketship",
+    "link":
+    "https://www.remoterocketship.com/company/gm/jobs/senior-software-engineer-mulesoft-integrations-austin-hybrid/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "Bandana.com",
+    "link":
+    "https://bandana.com/jobs/8fcaa747-2566-4bd3-8d79-f8df1c7d8106?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "BeBee",
+    "link":
+    "https://us.bebee.com/job/ab1e449c1f7fa4f543f8fdf78fe9744f?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    },
+    {
+    "title":
+    "JobLeads",
+    "link":
+    "https://www.jobleads.com/us/job/senior-software-engineer-integrations--united-states--e376e4dace84c9085f4d17ed53d53ea8d?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+    }
+    ],
+    "job_id":
+    "eyJqb2JfdGl0bGUiOiJTZW5pb3IgU29mdHdhcmUgRW5naW5lZXIgSW50ZWdyYXRpb25zIiwiY29tcGFueV9uYW1lIjoidGFsZW50YXJjaGl0ZWN0LmNvbSIsImFkZHJlc3NfY2l0eSI6IlVuaXRlZCBTdGF0ZXMiLCJodGlkb2NpZCI6Ijhzc2hKa3ZvQXRNalBvVkhBQUFBQUE9PSIsInV1bGUiOiJ3K0NBSVFJQ0lOVlc1cGRHVmtJRk4wWVhSbGN3IiwiZ2wiOiJ1cyIsImhsIjoiZW4ifQ=="
+    }
+    ],
+    "serpapi_pagination":
+    {
+    "next_page_token":
+    "eyJmYyI6IkV2Y0VDcmNFUVUxdU15MTVVV0pPUmtWdmJHVmFPRU01VG1KM1QwZEhiVmd4V1Zoc2FuSldXbmMwU3psT1JFbEpibmczY25Cc2VGRjJkVzlpUjE5Qk5XcG9Nbm8wVkRCWGNERjFNWHBtYVhobFNYUkVhbVJhY0VVNVIyMDVORFJmU1Rkc1gySnFTMGw2VTBSdVZFazBhVlZCZHpZMVVUSmxjRXROWWpOVlMwazNVekJ5UkRCTmNXazVObkZYWVROYVoyVTNSR2RzTnpKdU5YSkZSMHR1WnpsR2VXUTNhRU13VVc4ek1WSjJZelJyZFdwbmEyNWlTVXQxWlZWS2RWZHFiM0paZUVnMExWcDNSMGRuTlY5NGRFZFNkMlJGYUdJelJUSnhhbUpHWW5CbVUwaFZaREJ0V1VoWExYY3dTVmxJVFZoNGNuZE5ibkoxU2pobGVrOHlPRTlWWnpsTmJFWnNVMXBTUjI5UVNYVTJSamhuU0ZoeFdVWlRlVlpXVlZGSmNFUm9UMWxzZWtaR2VYbFBRMXB3VkRRNE1TMXZiMk16Vmw5RVRUWkpiMUozVVU4elVqRTNZVGRmYkVOTVkycFhOSGgyZFY5dFkzZEVja3BRY2pSeFozSkViMkpHUW5SRGRGTlZRalpQY2xCbVRIcDNSVzVqUlVGd1RFYzVkMFkxVlhsR09YUm9aV294TjBkQ09FZENOa3hRU0RoaGRrOVlhVVpDWTNGWmMwTnVVME13T0hKMVFVMTZTR2hDYTNWVFRtRk1USEZmZVdwcWNEZFhURmRyV1hwVFRreEtOVnBLVEZGTE4xbzFjMUJuVDFSaWRteDZSMTltTUY4ek1rcFdORzFFUTFKRVR6TnFMVkJLYmtGQ2JWZFdSVk5vYVc4Mk1HSmFha05IVFdSdVNUSnlRbFJQYzJ0TFdHaEdiM2x4UzA1WlZVNXRibXBNYmtaMmQxQTNhelYwVkdSaVdraHRSRFZEZG5NeVprSmxabkJSYzNSM2RVeHpkamxGRWhkVVZsb3dZV1ZJUTBKWmFWZDRZemhRYzBwUVZtZFJPQm9pUVVwTFRFWnRTMFo2YTBSVk1GWTNjSEJJYUdoMmFrNTBhMHg0TUZFMVUwaHdkdyIsImZjdiI6IjMifQ==",
+    "next":
+    "https://serpapi.com/search.json?engine=google_jobs&gl=us&google_domain=google.com&hl=en&location=United+States&next_page_token=eyJmYyI6IkV2Y0VDcmNFUVUxdU15MTVVV0pPUmtWdmJHVmFPRU01VG1KM1QwZEhiVmd4V1Zoc2FuSldXbmMwU3psT1JFbEpibmczY25Cc2VGRjJkVzlpUjE5Qk5XcG9Nbm8wVkRCWGNERjFNWHBtYVhobFNYUkVhbVJhY0VVNVIyMDVORFJmU1Rkc1gySnFTMGw2VTBSdVZFazBhVlZCZHpZMVVUSmxjRXROWWpOVlMwazNVekJ5UkRCTmNXazVObkZYWVROYVoyVTNSR2RzTnpKdU5YSkZSMHR1WnpsR2VXUTNhRU13VVc4ek1WSjJZelJyZFdwbmEyNWlTVXQxWlZWS2RWZHFiM0paZUVnMExWcDNSMGRuTlY5NGRFZFNkMlJGYUdJelJUSnhhbUpHWW5CbVUwaFZaREJ0V1VoWExYY3dTVmxJVFZoNGNuZE5ibkoxU2pobGVrOHlPRTlWWnpsTmJFWnNVMXBTUjI5UVNYVTJSamhuU0ZoeFdVWlRlVlpXVlZGSmNFUm9UMWxzZWtaR2VYbFBRMXB3VkRRNE1TMXZiMk16Vmw5RVRUWkpiMUozVVU4elVqRTNZVGRmYkVOTVkycFhOSGgyZFY5dFkzZEVja3BRY2pSeFozSkViMkpHUW5SRGRGTlZRalpQY2xCbVRIcDNSVzVqUlVGd1RFYzVkMFkxVlhsR09YUm9aV294TjBkQ09FZENOa3hRU0RoaGRrOVlhVVpDWTNGWmMwTnVVME13T0hKMVFVMTZTR2hDYTNWVFRtRk1USEZmZVdwcWNEZFhURmRyV1hwVFRreEtOVnBLVEZGTE4xbzFjMUJuVDFSaWRteDZSMTltTUY4ek1rcFdORzFFUTFKRVR6TnFMVkJLYmtGQ2JWZFdSVk5vYVc4Mk1HSmFha05IVFdSdVNUSnlRbFJQYzJ0TFdHaEdiM2x4UzA1WlZVNXRibXBNYmtaMmQxQTNhelYwVkdSaVdraHRSRFZEZG5NeVprSmxabkJSYzNSM2RVeHpkamxGRWhkVVZsb3dZV1ZJUTBKWmFWZDRZemhRYzBwUVZtZFJPQm9pUVVwTFRFWnRTMFo2YTBSVk1GWTNjSEJJYUdoMmFrNTBhMHg0TUZFMVUwaHdkdyIsImZjdiI6IjMifQ%3D%3D&q=Software+Engineer"
+    }
