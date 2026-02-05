@@ -55,25 +55,73 @@ async def get_user(user_id: str):
 @router.put("/{user_id}", response_model=UserInDB)
 async def update_user(user_id: str, updates: UserProfileUpdate):
     db = get_db()
+
     if not ObjectId.is_valid(user_id):
         raise HTTPException(status_code=400, detail="Invalid user ID")
 
-    update_data = {
-        k: v for k, v in updates.model_dump().items()
-        if v is not None
-    }
+    raw_updates = updates.model_dump(exclude_unset=True)
 
-    if not update_data:
+    if not raw_updates:
         raise HTTPException(
             status_code=400,
-            detail="No fields provided for update"
+            detail="No fields provided for update",
         )
+
+    update_data = {}
+
+    for key, value in raw_updates.items():
+        if key == "preferences" and isinstance(value, dict):
+            for pref_key, pref_val in value.items():
+                update_data[f"preferences.{pref_key}"] = pref_val
+        else:
+            update_data[key] = value
 
     update_data["updated_at"] = datetime.now(timezone.utc)
 
     result = await db.users.update_one(
         {"_id": ObjectId(user_id)},
-        {"$set": update_data}
+        {"$set": update_data},
+    )
+
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    updated_user = await db.users.find_one(
+        {"_id": ObjectId(user_id)}
+    )
+
+    return user_helper(updated_user)
+
+
+@router.patch("/{user_id}", response_model=UserInDB)
+async def patch_user(user_id: str, updates: UserProfileUpdate):
+    db = get_db()
+
+    if not ObjectId.is_valid(user_id):
+        raise HTTPException(status_code=400, detail="Invalid user ID")
+
+    raw_updates = updates.model_dump(exclude_unset=True)
+
+    if not raw_updates:
+        raise HTTPException(
+            status_code=400,
+            detail="No fields provided for update",
+        )
+
+    update_data: dict = {}
+
+    for key, value in raw_updates.items():
+        if key == "preferences" and isinstance(value, dict):
+            for pref_key, pref_val in value.items():
+                update_data[f"preferences.{pref_key}"] = pref_val
+        else:
+            update_data[key] = value
+
+    update_data["updated_at"] = datetime.now(timezone.utc)
+
+    result = await db.users.update_one(
+        {"_id": ObjectId(user_id)},
+        {"$set": update_data},
     )
 
     if result.matched_count == 0:
