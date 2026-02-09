@@ -388,3 +388,239 @@ async def test_delete_job(client):
     check = await client.get(f"/jobs/{job_id}")
 
     assert check.status_code == 404
+
+
+# ------------------------
+# CRUD Tests for /savedsearches
+# ------------------------
+@pytest.mark.asyncio
+async def test_create_saved_search(client):
+
+    # create user first
+    user = await client.post(
+        "/users/",
+        json={"name": "Saved User", "email": "saved@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    payload = {
+        "user_id": user_id,
+        "search_name": "Data Scientist Roles",
+        "search_query": {
+            "title": "data scientist",
+            "location": "remote",
+        },
+    }
+
+    res = await client.post("/saved-searches/", json=payload)
+
+    assert res.status_code == 201
+
+    body = res.json()
+
+    assert body["search_name"] == payload["search_name"]
+    assert body["user_id"] == user_id
+    assert body["total_matches"] == 0
+    assert body["new_matches"] == 0
+    assert "created_at" in body
+
+
+@pytest.mark.asyncio
+async def test_get_saved_searches_for_user(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Search Owner", "email": "owner@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "ML Roles",
+            "search_query": {"title": "ml"},
+        },
+    )
+
+    res = await client.get(f"/saved-searches/user/{user_id}")
+
+    assert res.status_code == 200
+    assert len(res.json()) == 1
+
+
+@pytest.mark.asyncio
+async def test_get_saved_search_by_id(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Lookup User", "email": "lookup@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    create = await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "Backend Jobs",
+            "search_query": {"title": "backend"},
+        },
+    )
+
+    search_id = create.json()["id"]
+
+    res = await client.get(f"/saved-searches/{search_id}")
+
+    assert res.status_code == 200
+    assert res.json()["id"] == search_id
+
+
+@pytest.mark.asyncio
+async def test_patch_saved_search(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Patch User", "email": "patch@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    create = await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "Old Name",
+            "search_query": {"title": "qa"},
+        },
+    )
+
+    search_id = create.json()["id"]
+
+    patch = await client.patch(
+        f"/saved-searches/{search_id}",
+        json={"search_name": "Updated Name"},
+    )
+
+    assert patch.status_code == 200
+    assert patch.json()["search_name"] == "Updated Name"
+
+
+@pytest.mark.asyncio
+async def test_put_saved_search(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Put User", "email": "put@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    create = await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "Old",
+            "search_query": {"role": "dev"},
+        },
+    )
+
+    search_id = create.json()["id"]
+
+    put = await client.put(
+        f"/saved-searches/{search_id}",
+        json={
+            "search_name": "New",
+            "search_query": {"role": "frontend"},
+        },
+    )
+
+    assert put.status_code == 200
+    assert put.json()["search_name"] == "New"
+
+
+@pytest.mark.asyncio
+async def test_delete_saved_search(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Delete User", "email": "delete@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    create = await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "Temp",
+            "search_query": {"title": "temp"},
+        },
+    )
+
+    search_id = create.json()["id"]
+
+    delete = await client.delete(
+        f"/saved-searches/{search_id}",
+    )
+
+    assert delete.status_code == 204
+
+    check = await client.get(
+        f"/saved-searches/{search_id}",
+    )
+
+    assert check.status_code == 404
+
+
+@pytest.mark.asyncio
+async def test_patch_empty_saved_search_payload(client):
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Empty Patch", "email": "empty@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    create = await client.post(
+        "/saved-searches/",
+        json={
+            "user_id": user_id,
+            "search_name": "Name",
+            "search_query": {"q": "x"},
+        },
+    )
+
+    search_id = create.json()["id"]
+
+    patch = await client.patch(
+        f"/saved-searches/{search_id}",
+        json={},
+    )
+
+    assert patch.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_saved_search_invalid_id(client):
+
+    res = await client.get("/saved-searches/not-an-id")
+
+    assert res.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_saved_search_invalid_user_fk(client):
+
+    payload = {
+        "user_id": "not-an-object-id",
+        "search_name": "Bad",
+        "search_query": {},
+    }
+
+    res = await client.post("/saved-searches/", json=payload)
+
+    assert res.status_code == 400

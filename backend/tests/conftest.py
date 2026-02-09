@@ -28,9 +28,11 @@ async def clean_collections(client):
     # Clean BEFORE
     await db.users.delete_many({})
     await db.jobs.delete_many({})
+    await db.saved_searches.delete_many({})
 
     yield
 
     # Clean AFTER
     await db.users.delete_many({})
     await db.jobs.delete_many({})
+    await db.saved_searches.delete_many({})
