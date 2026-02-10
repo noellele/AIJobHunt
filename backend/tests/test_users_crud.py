@@ -624,3 +624,221 @@ async def test_saved_search_invalid_user_fk(client):
     res = await client.post("/saved-searches/", json=payload)
 
     assert res.status_code == 400
+
+
+# ------------------------
+# CRUD Tests for /users/{user_id}/stats
+# ------------------------
+
+@pytest.mark.asyncio
+async def test_userstats_auto_created(client):
+    """Test that user stats are automatically created when a user is created"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Stats User", "email": "stats@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    res = await client.get(f"/users/{user_id}/stats")
+
+    assert res.status_code == 200
+
+    body = res.json()
+
+    assert body["user_id"] == user_id
+    assert body["jobs_viewed"] == 0
+    assert body["jobs_saved"] == 0
+    assert body["top_missing_skill"] is None
+    assert body["created_at"] is not None
+    assert body["last_calculated"] is None
+
+
+@pytest.mark.asyncio
+async def test_patch_userstats_fields(client):
+    """Test updating user stats with valid data"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Stats Patch", "email": "patch@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    patch = await client.patch(
+        f"/users/{user_id}/stats",
+        json={
+            "jobs_viewed": 5,
+            "jobs_saved": 2,
+            "top_missing_skill": "Docker",
+        },
+    )
+
+    assert patch.status_code == 200
+
+    body = patch.json()
+
+    assert body["jobs_viewed"] == 5
+    assert body["jobs_saved"] == 2
+    assert body["top_missing_skill"] == "Docker"
+    assert body["last_calculated"] is not None
+
+
+@pytest.mark.asyncio
+async def test_patch_userstats_partial_update(client):
+    """Test partial update of user stats"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Partial Update", "email": "partial@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    # Update only jobs_viewed
+    patch = await client.patch(
+        f"/users/{user_id}/stats",
+        json={"jobs_viewed": 10},
+    )
+
+    assert patch.status_code == 200
+
+    body = patch.json()
+
+    assert body["jobs_viewed"] == 10
+    assert body["jobs_saved"] == 0
+    assert body["top_missing_skill"] is None
+    assert body["last_calculated"] is not None
+
+
+@pytest.mark.asyncio
+async def test_patch_empty_userstats_payload(client):
+    """Test that empty payload returns error"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Empty Stats", "email": "empty@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    patch = await client.patch(
+        f"/users/{user_id}/stats",
+        json={},
+    )
+
+    assert patch.status_code == 400
+    assert "No fields provided for update" in patch.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_get_userstats_invalid_user_id(client):
+    """Test getting stats with invalid user ID format"""
+    res = await client.get("/users/not_an_id/stats")
+
+    assert res.status_code == 400
+    assert "Invalid user ID" in res.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_get_userstats_nonexistent_user(client):
+    """Test getting stats for a user that doesn't exist"""
+    from bson import ObjectId
+    fake_id = str(ObjectId())
+    res = await client.get(f"/users/{fake_id}/stats")
+
+    assert res.status_code == 404
+    assert "UserStats not found" in res.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_patch_userstats_nonexistent_user(client):
+    """Test patching stats for a user that doesn't exist"""
+    from bson import ObjectId
+    fake_id = str(ObjectId())
+    res = await client.patch(
+        f"/users/{fake_id}/stats",
+        json={"jobs_viewed": 5},
+    )
+
+    assert res.status_code == 404
+    assert "UserStats not found" in res.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_userstats_deleted_with_user(client):
+    """Test that user stats are automatically deleted when user is deleted"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Stats Delete", "email": "del@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    # Verify stats exist
+    stats = await client.get(f"/users/{user_id}/stats")
+    assert stats.status_code == 200
+
+    # Delete user
+    delete_user = await client.delete(f"/users/{user_id}")
+    assert delete_user.status_code == 204
+
+    # Verify stats are also gone
+    check_stats = await client.get(f"/users/{user_id}/stats")
+    assert check_stats.status_code == 404
+
+
+@pytest.mark.asyncio
+async def test_patch_userstats_invalid_data_types(client):
+    """Test that invalid data types are rejected"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Invalid Data", "email": "invalid@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    # Try to send string for integer field
+    patch = await client.patch(
+        f"/users/{user_id}/stats",
+        json={"jobs_viewed": "not_a_number"},
+    )
+
+    assert patch.status_code == 422
+
+
+@pytest.mark.asyncio
+async def test_userstats_incrementing_workflow(client):
+    """Test a realistic workflow of incrementing stats over time"""
+    user = await client.post(
+        "/users/",
+        json={"name": "Workflow User", "email": "workflow@test.com"},
+    )
+
+    user_id = user.json()["id"]
+
+    # First update
+    await client.patch(
+        f"/users/{user_id}/stats",
+        json={"jobs_viewed": 1},
+    )
+
+    # Second update
+    await client.patch(
+        f"/users/{user_id}/stats",
+        json={"jobs_viewed": 5, "jobs_saved": 1},
+    )
+
+    # Third update
+    res = await client.patch(
+        f"/users/{user_id}/stats",
+        json={
+            "jobs_viewed": 10,
+            "jobs_saved": 3,
+            "top_missing_skill": "Python"
+        },
+    )
+
+    assert res.status_code == 200
+    body = res.json()
+    assert body["jobs_viewed"] == 10
+    assert body["jobs_saved"] == 3
+    assert body["top_missing_skill"] == "Python"
+    assert body["last_calculated"] is not None

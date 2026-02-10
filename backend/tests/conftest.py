@@ -29,6 +29,7 @@ async def clean_collections(client):
     await db.users.delete_many({})
     await db.jobs.delete_many({})
     await db.saved_searches.delete_many({})
+    await db.user_stats.delete_many({})
 
     yield
 
@@ -36,3 +37,4 @@ async def clean_collections(client):
     await db.users.delete_many({})
     await db.jobs.delete_many({})
     await db.saved_searches.delete_many({})
+    await db.user_stats.delete_many({})
