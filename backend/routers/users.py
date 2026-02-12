@@ -151,8 +151,18 @@ async def delete_user(user_id: str):
     if not ObjectId.is_valid(user_id):
         raise HTTPException(status_code=400, detail="Invalid user ID")
 
-    # Delete user stats first to maintain referential integrity
+    # Cascading delete on user stats
     await db.user_stats.delete_one(
+        {"user_id": ObjectId(user_id)}
+    )
+
+    # Cascading delete on saved searches
+    await db.saved_searches.delete_many(
+        {"user_id": ObjectId(user_id)}
+    )
+
+    # Cascading delete on user-job interactions
+    await db.user_job_interactions.delete_many(
         {"user_id": ObjectId(user_id)}
     )
 

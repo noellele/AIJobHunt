@@ -138,3 +138,10 @@ async def delete_job(job_id: str):
 
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Job not found")
+
+    # Cascading delete on user-job interactions
+    await db.user_job_interactions.delete_many(
+        {"job_id": ObjectId(job_id)}
+    )
+
+    return

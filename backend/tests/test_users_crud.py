@@ -842,3 +842,722 @@ async def test_userstats_incrementing_workflow(client):
     assert body["jobs_saved"] == 3
     assert body["top_missing_skill"] == "Python"
     assert body["last_calculated"] is not None
+
+
+# ------------------------
+# CRUD Tests for /interactions
+# ------------------------
+@pytest.mark.asyncio
+async def test_create_userjobinteraction(client):
+    """Test creating a user-job interaction with valid data"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Interaction User", "email": "ij@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-1",
+            "title": "Biologist",
+            "company": "BioLab",
+            "description": "Research life.",
+            "location": "Boston",
+        },
+    )
+
+    res = await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    assert res.status_code == 201
+
+    body = res.json()
+
+    assert body["user_id"] == user.json()["id"]
+    assert body["job_id"] == job.json()["id"]
+    assert body["interaction_type"] == "viewed"
+    assert "id" in body
+    assert "timestamp" in body
+
+
+@pytest.mark.asyncio
+async def test_userjobinteraction_invalid_user_fk(client):
+    """Test that creating an interaction with invalid user_id FK fails"""
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-2",
+            "title": "Chemist",
+            "company": "Lab",
+            "description": "Analyze samples.",
+            "location": "NYC",
+        },
+    )
+
+    res = await client.post(
+        "/interactions/",
+        json={
+            "user_id": "notanid",
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    assert res.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_userjobinteraction_duplicate_blocked(client):
+    """Test that creating a duplicate interaction
+    (same user_id, job_id, interaction_type) is blocked"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Dup IJ", "email": "dupij@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-3",
+            "title": "Teacher",
+            "company": "School",
+            "description": "Teach.",
+            "location": "Denver",
+        },
+    )
+
+    payload = {
+        "user_id": user.json()["id"],
+        "job_id": job.json()["id"],
+        "interaction_type": "saved",
+    }
+
+    first = await client.post(
+        "/interactions/",
+        json=payload,
+    )
+
+    assert first.status_code == 201
+
+    second = await client.post(
+        "/interactions/",
+        json=payload,
+    )
+
+    assert second.status_code == 409
+
+
+@pytest.mark.asyncio
+async def test_get_interactions_by_user(client):
+    """Test fetching interactions for a user returns all
+    interactions associated with that user"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "User Fetch", "email": "uf@test.com"},
+    )
+
+    job1 = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-4",
+            "title": "Nurse",
+            "company": "Hospital",
+            "description": "Care.",
+            "location": "Miami",
+        },
+    )
+
+    job2 = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-5",
+            "title": "Analyst",
+            "company": "Corp",
+            "description": "Analyze.",
+            "location": "Chicago",
+        },
+    )
+
+    await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job1.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job2.json()["id"],
+            "interaction_type": "applied",
+        },
+    )
+
+    res = await client.get(
+        f"/interactions/user/{user.json()['id']}"
+    )
+
+    assert res.status_code == 200
+    assert len(res.json()) == 2
+
+
+@pytest.mark.asyncio
+async def test_get_interactions_by_job(client):
+    """Test fetching interactions for a job returns all interactions
+    associated with that job"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "User Fetch", "email": "uf@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-5",
+            "title": "Analyst",
+            "company": "Corp",
+            "description": "Analyze.",
+            "location": "Chicago",
+        },
+    )
+
+    await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "applied",
+        },
+    )
+
+    res = await client.get(
+        f"/interactions/job/{job.json()['id']}"
+    )
+
+    assert res.status_code == 200
+    assert res.json()[0]["interaction_type"] == "applied"
+    assert len(res.json()) == 1
+
+
+@pytest.mark.asyncio
+async def test_patch_userjobinteraction(client):
+    """Test updating the interaction_type of an
+    existing user-job interaction"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Patch IJ", "email": "patchij@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-6",
+            "title": "Designer",
+            "company": "Studio",
+            "description": "Design.",
+            "location": "Remote",
+        },
+    )
+
+    create = await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    iid = create.json()["id"]
+
+    patch = await client.patch(
+        f"/interactions/{iid}",
+        json={"interaction_type": "saved"},
+    )
+
+    assert patch.status_code == 200
+    assert patch.json()["interaction_type"] == "saved"
+
+
+@pytest.mark.asyncio
+async def test_patch_userjobinteraction_empty_payload(client):
+    """Test that patching a user-job interaction with
+    an empty payload returns an error"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Empty IJ", "email": "emptyij@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-7",
+            "title": "Writer",
+            "company": "Media",
+            "description": "Write.",
+            "location": "LA",
+        },
+    )
+
+    create = await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    iid = create.json()["id"]
+
+    patch = await client.patch(
+        f"/interactions/{iid}",
+        json={},
+    )
+
+    assert patch.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_delete_userjobinteraction(client):
+    """Test deleting a user-job interaction by ID"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Del IJ", "email": "delij@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-int-8",
+            "title": "Clerk",
+            "company": "Office",
+            "description": "Admin.",
+            "location": "Austin",
+        },
+    )
+
+    create = await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    iid = create.json()["id"]
+
+    delete = await client.delete(
+        f"/interactions/{iid}"
+    )
+
+    assert delete.status_code == 204
+
+
+@pytest.mark.asyncio
+async def test_interactions_deleted_with_user(client):
+    """Test that interactions are automatically deleted
+    when a user is deleted"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Cascade User", "email": "cascade@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-cascade-1",
+            "title": "Scientist",
+            "company": "Lab",
+            "description": "Research.",
+            "location": "NYC",
+        },
+    )
+
+    # Create interaction
+    await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "viewed",
+        },
+    )
+
+    # Delete user
+    await client.delete(f"/users/{user.json()['id']}")
+
+    # Verify interactions are gone
+    res = await client.get(
+        f"/interactions/user/{user.json()['id']}"
+    )
+
+    assert res.status_code == 200
+    assert res.json() == []
+
+
+@pytest.mark.asyncio
+async def test_interactions_deleted_with_job(client):
+    """Test that interactions are automatically deleted
+    when a job is deleted"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Cascade Job", "email": "cascadejob@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-cascade-2",
+            "title": "Engineer",
+            "company": "Tech",
+            "description": "Build.",
+            "location": "SF",
+        },
+    )
+
+    # Create interaction
+    await client.post(
+        "/interactions/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "interaction_type": "saved",
+        },
+    )
+
+    # Delete job
+    await client.delete(f"/jobs/{job.json()['id']}")
+
+    # Verify interactions are gone
+    res = await client.get(
+        f"/interactions/job/{job.json()['id']}"
+    )
+
+    assert res.status_code == 200
+    assert res.json() == []
+
+
+# ------------------------
+# CRUD Tests for /jobmatches
+# ------------------------
+
+@pytest.mark.asyncio
+async def test_create_jobmatch(client):
+    """Test creating a job match with valid data"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Match User", "email": "match@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-match-1",
+            "title": "Data Scientist",
+            "company": "AI Corp",
+            "description": "ML work.",
+            "location": "Remote",
+        },
+    )
+
+    payload = {
+        "user_id": user.json()["id"],
+        "job_id": job.json()["id"],
+        "relevancy_score": 0.87,
+        "match_reason": "Strong ML alignment",
+        "match_details": {
+            "skills_matched": ["Python", "ML"],
+            "skills_missing": ["Docker"],
+            "overall_compatibility": 0.9,
+        },
+        "user_snapshot": {
+            "preferences_at_match": {"location": "Remote"},
+            "credentials_at_match": {"years_experience": 3},
+        },
+    }
+
+    res = await client.post("/job-matches/", json=payload)
+
+    assert res.status_code == 201
+
+    body = res.json()
+
+    assert body["user_id"] == payload["user_id"]
+    assert body["job_id"] == payload["job_id"]
+    assert body["relevancy_score"] == 0.87
+    assert body["is_active"] is True
+    assert "id" in body
+    assert "matched_at" in body
+
+
+@pytest.mark.asyncio
+async def test_jobmatch_duplicate_blocked(client):
+    """Test that creating a duplicate job match
+    (same user_id and job_id) is blocked"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Dup Match", "email": "dup-match@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-match-dup",
+            "title": "Engineer",
+            "company": "Tech",
+            "description": "Build.",
+            "location": "SF",
+        },
+    )
+
+    payload = {
+        "user_id": user.json()["id"],
+        "job_id": job.json()["id"],
+        "relevancy_score": 0.75,
+        "match_details": {
+            "skills_matched": [],
+            "skills_missing": [],
+            "overall_compatibility": 0.7,
+        },
+        "user_snapshot": {
+            "preferences_at_match": {},
+            "credentials_at_match": {},
+        },
+    }
+
+    first = await client.post("/job-matches/", json=payload)
+    assert first.status_code == 201
+
+    second = await client.post("/job-matches/", json=payload)
+    assert second.status_code == 409
+
+
+@pytest.mark.asyncio
+async def test_get_jobmatches_for_user(client):
+    """Test fetching job matches for a user returns
+    all matches associated with that user"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "List Match", "email": "list@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-match-list",
+            "title": "Analyst",
+            "company": "Finance",
+            "description": "Analyze.",
+            "location": "NYC",
+        },
+    )
+
+    await client.post(
+        "/job-matches/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "relevancy_score": 0.6,
+            "match_details": {
+                "skills_matched": [],
+                "skills_missing": [],
+                "overall_compatibility": 0.6,
+            },
+            "user_snapshot": {
+                "preferences_at_match": {},
+                "credentials_at_match": {},
+            },
+        },
+    )
+
+    res = await client.get(
+        f"/job-matches/user/{user.json()['id']}"
+    )
+
+    assert res.status_code == 200
+    assert len(res.json()) == 1
+
+
+@pytest.mark.asyncio
+async def test_patch_jobmatch(client):
+    """Test updating the is_active status of an existing job match"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Patch Match", "email": "patchmatch@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-match-patch",
+            "title": "Architect",
+            "company": "Design",
+            "description": "Design systems.",
+            "location": "Chicago",
+        },
+    )
+
+    create = await client.post(
+        "/job-matches/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "relevancy_score": 0.5,
+            "match_details": {
+                "skills_matched": [],
+                "skills_missing": [],
+                "overall_compatibility": 0.5,
+            },
+            "user_snapshot": {
+                "preferences_at_match": {},
+                "credentials_at_match": {},
+            },
+        },
+    )
+
+    match_id = create.json()["id"]
+
+    patch = await client.patch(
+        f"/job-matches/{match_id}",
+        json={"is_active": False},
+    )
+
+    assert patch.status_code == 200
+    assert patch.json()["is_active"] is False
+
+
+@pytest.mark.asyncio
+async def test_delete_jobmatch(client):
+    """Test deleting a job match by ID and verifying it no longer exists"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Delete Match", "email": "delmatch@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-match-del",
+            "title": "Nurse",
+            "company": "Hospital",
+            "description": "Care.",
+            "location": "Boston",
+        },
+    )
+
+    create = await client.post(
+        "/job-matches/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "relevancy_score": 0.8,
+            "match_details": {
+                "skills_matched": [],
+                "skills_missing": [],
+                "overall_compatibility": 0.8,
+            },
+            "user_snapshot": {
+                "preferences_at_match": {},
+                "credentials_at_match": {},
+            },
+        },
+    )
+
+    match_id = create.json()["id"]
+
+    delete = await client.delete(f"/job-matches/{match_id}")
+    assert delete.status_code == 204
+
+
+@pytest.mark.asyncio
+async def test_jobmatch_invalid_fk(client):
+    """Test that creating a job match with invalid user_id
+    and job_id foreign keys fails"""
+
+    res = await client.post(
+        "/job-matches/",
+        json={
+            "user_id": "invalid",
+            "job_id": "invalid",
+            "relevancy_score": 0.5,
+            "match_details": {
+                "skills_matched": [],
+                "skills_missing": [],
+                "overall_compatibility": 0.5,
+            },
+            "user_snapshot": {
+                "preferences_at_match": {},
+                "credentials_at_match": {},
+            },
+        },
+    )
+
+    assert res.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_jobmatch_score_validation(client):
+    """Test that creating a job match with an invalid relevancy score
+    (e.g. greater than 1) fails"""
+
+    user = await client.post(
+        "/users/",
+        json={"name": "Score Test", "email": "score@test.com"},
+    )
+
+    job = await client.post(
+        "/jobs/",
+        json={
+            "external_id": "job-score",
+            "title": "QA",
+            "company": "TestCo",
+            "description": "Test.",
+            "location": "Remote",
+        },
+    )
+
+    res = await client.post(
+        "/job-matches/",
+        json={
+            "user_id": user.json()["id"],
+            "job_id": job.json()["id"],
+            "relevancy_score": 1.5,  # invalid
+            "match_details": {
+                "skills_matched": [],
+                "skills_missing": [],
+                "overall_compatibility": 1.5,
+            },
+            "user_snapshot": {
+                "preferences_at_match": {},
+                "credentials_at_match": {},
+            },
+        },
+    )
+
+    assert res.status_code == 422

@@ -2,12 +2,14 @@ import os
 import pytest_asyncio
 from httpx import AsyncClient, ASGITransport
 from backend.main import app
+from backend.db.indexes import ensure_indexes
 from backend.db.mongo import mongo, get_db
 
 
 @pytest_asyncio.fixture
 async def client():
     await mongo.connect(os.getenv("TEST_DB"))
+    await ensure_indexes()
 
     transport = ASGITransport(app=app)
 
@@ -30,6 +32,8 @@ async def clean_collections(client):
     await db.jobs.delete_many({})
     await db.saved_searches.delete_many({})
     await db.user_stats.delete_many({})
+    await db.user_job_interactions.delete_many({})
+    await db.job_matches.delete_many({})
 
     yield
 
@@ -38,3 +42,5 @@ async def clean_collections(client):
     await db.jobs.delete_many({})
     await db.saved_searches.delete_many({})
     await db.user_stats.delete_many({})
+    await db.user_job_interactions.delete_many({})
+    await db.job_matches.delete_many({})
