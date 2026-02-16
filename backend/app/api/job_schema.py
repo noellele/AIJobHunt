@@ -8,7 +8,7 @@ Schema:
   company: str
   description: str
   location: str
-  remote_type: str ("remote" | "hybrid" | "onsite" | "")
+  remote_type: str ("remote" | "hybrid" | "onsite" | "not provided")
   skills_required: list[str]
   posted_date: datetime (UTC) or None
   source_url: str
@@ -68,26 +68,42 @@ def _tags_to_skills(tags: Any) -> List[str]:
 
 
 def _infer_remote_type(location: str) -> str:
-    """Infer remote_type from location string."""
-    if not location:
-        return ""
+    """Infer remote_type from location string. Do not assume onsite when unknown."""
+    if not location or (location or "").strip() == "":
+        return "not provided"
     loc = (location or "").lower()
-    if "remote" in loc or "anywhere" in loc or loc == "n/a":
-        return "remote"
+    # Check hybrid first: hybrid is a more restrictive version of remote. If we checked
+    # remote first, "Remote/Hybrid" or "Hybrid/Remote" would match "remote" and be
+    # incorrectly classified as remote; checking hybrid first ensures accuracy.
     if "hybrid" in loc:
         return "hybrid"
-    return "onsite"
+    if "remote" in loc or "anywhere" in loc or loc == "n/a":
+        return "remote"
+    if "onsite" in loc or "on-site" in loc or "in-office" in loc:
+        return "onsite"
+    # Cannot determine; do not assume onsite
+    return "not provided"
 
 
 def _to_number(value: Any) -> Optional[float]:
-    """Convert value to number for salary. Returns None if not a number."""
+    """Convert value to number for salary. Handles 80k, 80.5k, 80000. Returns None if unparseable."""
     if value is None or value == "":
         return None
     if isinstance(value, (int, float)):
         return float(value)
     s = str(value).strip().replace(",", "")
+    # Remove common prefixes
+    for prefix in ("$", "USD", "usd"):
+        if s.upper().startswith(prefix):
+            s = s[len(prefix):].strip()
     if not s:
         return None
+    # Handle "80k" / "80.5k" so we always output a proper number when possible
+    if s.upper().endswith("K"):
+        try:
+            return float(s[:-1]) * 1000
+        except ValueError:
+            return None
     try:
         return float(s)
     except ValueError:

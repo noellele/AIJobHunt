@@ -13,10 +13,12 @@ posted_date, source_url, source_platform, salary_range, source, ingested_at.
 
 import os
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Callable
+from typing import List, Dict, Any, Callable, Optional
 
 from pymongo import MongoClient
 from pymongo.collection import Collection
+
+_client: Optional[MongoClient] = None
 
 try:
     from backend.app.api.job_schema import to_canonical_document
@@ -46,17 +48,27 @@ def _ensure_env_loaded():
             break
 
 
-def get_mongo_collection() -> Collection:
-    """
-    Build MongoDB client and return the jobs collection (sync).
-    All three values must be set in .env for security and explicit configuration.
-    """
+def _get_mongo_client() -> MongoClient:
+    """Lazy singleton: create one MongoClient and reuse it to avoid too many connections."""
+    global _client
+    if _client is not None:
+        return _client
     _ensure_env_loaded()
     uri = os.getenv("MONGODB_CONNECT_STRING")
     if not uri:
         raise ValueError(
             "MONGODB_CONNECT_STRING is not set. Add it to your .env file."
         )
+    _client = MongoClient(uri, serverSelectionTimeoutMS=5000)
+    return _client
+
+
+def get_mongo_collection() -> Collection:
+    """
+    Return the jobs collection (sync). Uses a shared client via _get_mongo_client().
+    All three env vars must be set: MONGODB_CONNECT_STRING, PROD_DB, MONGO_JOBS_COLLECTION.
+    """
+    _ensure_env_loaded()
     db_name = os.getenv("PROD_DB")
     if not db_name:
         raise ValueError(
@@ -67,8 +79,7 @@ def get_mongo_collection() -> Collection:
         raise ValueError(
             "MONGO_JOBS_COLLECTION is not set. Add the collection name to your .env file."
         )
-
-    client = MongoClient(uri)
+    client = _get_mongo_client()
     db = client[db_name]
     return db[collection_name]
 
@@ -107,6 +118,6 @@ def insert_jobs_into_mongo(
         doc["ingested_at"] = now  # optional audit field; rest matches Job Posting schema
         docs.append(doc)
 
-    # Append only: insert_many adds new documents. Add unique index on external_id to reject duplicates.
-    result = collection.insert_many(docs)
+    # Append only. ordered=False so duplicate key (or other per-doc) errors don't abort the whole batch.
+    result = collection.insert_many(docs, ordered=False)
     return len(result.inserted_ids)
