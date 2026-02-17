@@ -20,8 +20,8 @@ const AppNavbar = () => {
           {/* Main Navigation Links */}
           <Nav className="me-auto gap-lg-4">
             {user && <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>}
+            {user && <Nav.Link as={Link} to="/search">Search</Nav.Link>}
             <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/search">Search</Nav.Link>
           </Nav>
 
           {/* Account Actions */}

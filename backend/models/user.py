@@ -1,9 +1,11 @@
 from datetime import datetime, timezone
-from pydantic import BaseModel, EmailStr, Field, field_validator
-from typing import Optional
-from typing import List
-from pydantic import model_validator
+from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator, model_validator, BeforeValidator
+from typing import Optional, List, Annotated
+from bson import ObjectId
 
+
+# This helper converts ObjectId to string for Pydantic validation
+PyObjectId = Annotated[str, BeforeValidator(str)]
 
 class UserPreferences(BaseModel):
     desired_locations: List[str] = []
@@ -56,7 +58,7 @@ class UserPreferencesUpdate(BaseModel):
 class UserProfile(BaseModel):
     name: str = Field(..., min_length=1, max_length=100)
     email: EmailStr
-    preferences: Optional[UserPreferences] = None
+    preferences: UserPreferences = Field(default_factory=UserPreferences)
     created_at: datetime = Field(
         default_factory=lambda: datetime.now(timezone.utc)
         )
@@ -73,7 +75,14 @@ class UserProfileUpdate(BaseModel):
 
 
 class UserInDB(UserProfile):
-    id: str
+    id: PyObjectId = Field(..., alias="_id")
+    # map '_id' from Mongo to 'id' in API
+    model_config = ConfigDict(
+        # allows Pydantic to accept the raw MongoDB dictionary
+        from_attributes=True, 
+        # ensures that 'id' and '_id' can be used interchangeably
+        populate_by_name=True
+    )
 
 
 class UserAuthBase(BaseModel):
@@ -100,7 +109,14 @@ def user_helper(user) -> dict:
         "id": str(user["_id"]),
         "name": user["name"],
         "email": user["email"],
-        "preferences": user.get("preferences"),
+        # returns an empty dict if the key is missing
+        "preferences": user.get("preferences", {
+            "desired_locations": [],
+            "target_roles": [],
+            "skills": [],
+            "salary_min": 0,
+            "salary_max": 0
+        }),
         "created_at": user["created_at"],
         "updated_at": user.get("updated_at"),
     }

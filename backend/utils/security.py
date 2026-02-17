@@ -33,8 +33,8 @@ async def get_current_user(token: str = Depends(oauth2_scheme)):
     # get full user object from MongoDB
     user = await db.users.find_one({"email": email})
     if user is None:
-        raise credentials_exception
-    return user_helper(user)
+        raise HTTPException(status_code=401, detail="User not found in database")
+    return user
 
 
 def hash_password(password: str):

@@ -1,8 +1,10 @@
 from datetime import datetime, timezone
-from typing import List, Optional
+from typing import List, Optional, Annotated
+from pydantic import BaseModel, Field, model_validator, ConfigDict, BeforeValidator
 
-from pydantic import BaseModel, Field, model_validator
 
+# This helper converts ObjectId to string for Pydantic validation
+PyObjectId = Annotated[str, BeforeValidator(str)]
 
 class SalaryRange(BaseModel):
     min: Optional[int] = Field(None, ge=0)
@@ -88,7 +90,12 @@ class JobPostingUpdate(BaseModel):
 
 
 class JobInDB(JobPosting):
-    id: str
+    id: PyObjectId = Field(..., alias="_id")
+    
+    model_config = ConfigDict(
+        from_attributes=True,
+        populate_by_name=True
+    )
 
 
 def job_helper(job) -> dict:

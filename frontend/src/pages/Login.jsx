@@ -8,14 +8,14 @@ import { useAuth } from '../context/AuthContext';
 const Login = () => {
   const [authError, setAuthError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
-  
+
   const navigate = useNavigate();
   const { login } = useAuth();
-  
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors, isSubmitting } 
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting }
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -34,6 +34,25 @@ const Login = () => {
       setAuthError(message);
     }
   };
+
+  const handleDevBypass = async () => {
+    const devCredentials = {
+      email: import.meta.env.VITE_DEV_BYPASS_EMAIL,
+      password: import.meta.env.VITE_DEV_BYPASS_PASSWORD
+    };
+    try {
+      const response = await api.post('/auth/login', devCredentials);
+      const { access_token, user } = response.data;
+      if (user) {
+        login(access_token, user);
+        navigate('/dashboard');
+      } 
+    } catch (err) {
+      console.error("Bypass failed: ", err);
+      setAuthError("Bypass failed. Check your .env and backend.");
+    }
+  };
+
 
   return (
     <Container className="mt-5">
@@ -84,8 +103,8 @@ const Login = () => {
                       })}
                       isInvalid={!!errors.password}
                     />
-                    <Button 
-                      variant="outline-secondary" 
+                    <Button
+                      variant="outline-secondary"
                       onClick={() => setShowPassword(!showPassword)}
                       style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
                     >
@@ -98,10 +117,10 @@ const Login = () => {
                 </Form.Group>
 
                 <div className="text-center">
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting} 
-                    variant="primary" 
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    variant="primary"
                     className="w-100 py-2 fw-semibold mb-3"
                   >
                     {isSubmitting ? (
@@ -113,6 +132,17 @@ const Login = () => {
                       'Sign In'
                     )}
                   </Button>
+
+                  {/* DEV BYPASS */}
+                  {import.meta.env.DEV && (
+                    <button
+                      type="button"
+                      onClick={handleDevBypass}
+                      className="btn btn-outline-warning btn-sm border-dashed"
+                    >
+                      Dev Bypass (Auto-Login)
+                    </button>
+                  )}
 
                   <p className="small text-muted mt-2">
                     Need an account? <Link to="/register" className="text-decoration-none">Create Account</Link>
