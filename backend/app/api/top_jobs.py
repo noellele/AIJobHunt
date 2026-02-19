@@ -1,7 +1,9 @@
 """
 Shared list of job titles used by multiple API ingestion scripts.
 
-Used by: adzuna_top_jobs_to_mongo, serpapi_to_mongo, test_adzuna_api_top_jobs.
+All job title lists are defined only in this file. No other file or API defines or sources job title lists.
+
+Used by: adzuna_top_jobs_to_mongo, adzuna_fetch_top_jobs, jobicy_fetch_top_jobs, jobicy_to_mongo, serpapi_fetch_top_jobs, serpapi_to_mongo.
 Single source of truth; edit here to add/remove titles for all consumers.
 """
 
