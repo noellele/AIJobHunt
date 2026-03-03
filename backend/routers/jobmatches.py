@@ -1,7 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from typing import List
-from pymongo.errors import DuplicateKeyError
 from pymongo import ReturnDocument
+from backend.services.userstats_service import (
+    recalculate_top_missing_skill_for_user
+)
+from backend.services.jobmatches_service import (
+    upsert_job_match
+)
 
 from backend.db.mongo import get_db
 from backend.utils.validation import validate_object_id
@@ -19,28 +24,15 @@ router = APIRouter()
 async def create_job_match(payload: JobMatchCreate):
     db = get_db()
 
-    user_oid = validate_object_id(payload.user_id, "user ID")
-    job_oid = validate_object_id(payload.job_id, "job ID")
+    updated = await upsert_job_match(
+        db=db,
+        user_id=payload.user_id,
+        job_id=payload.job_id,
+        score=payload.score,
+        missing_skills=payload.missing_skills,
+    )
 
-    if not await db.users.find_one({"_id": user_oid}):
-        raise HTTPException(404, "User not found")
-
-    if not await db.jobs.find_one({"_id": job_oid}):
-        raise HTTPException(404, "Job not found")
-
-    doc = payload.model_dump()
-    doc["user_id"] = user_oid
-    doc["job_id"] = job_oid
-
-    try:
-        result = await db.job_matches.insert_one(doc)
-        doc["_id"] = result.inserted_id
-        return jobmatch_helper(doc)
-    except DuplicateKeyError:
-        raise HTTPException(
-            status_code=409,
-            detail="Job match already exists for this user and job",
-        )
+    return jobmatch_helper(updated)
 
 
 @router.get("/user/{user_id}", response_model=List[JobMatchInDB])
@@ -80,9 +72,20 @@ async def update_job_match(match_id: str, updates: JobMatchUpdate):
 @router.delete("/{match_id}", status_code=204)
 async def delete_job_match(match_id: str):
     db = get_db()
+
     match_oid = validate_object_id(match_id, "match ID")
+    doc = await db.job_matches.find_one({"_id": match_oid})
 
-    result = await db.job_matches.delete_one({"_id": match_oid})
+    if not doc:
+        raise HTTPException(status_code=404, detail="Match not found")
 
-    if result.deleted_count == 0:
-        raise HTTPException(404, "Match not found")
+    user_oid = doc["user_id"]
+
+    # Delete the job match
+    await db.job_matches.delete_one({"_id": match_oid})
+
+    # Automatically recalculate top missing skill
+    await recalculate_top_missing_skill_for_user(db, user_oid)
+
+    # 204 means no response body
+    return

@@ -1,11 +1,15 @@
-from fastapi import APIRouter, HTTPException, Body
-from bson import ObjectId
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Optional
+
+from backend.services.userstats_service import (
+    recalculate_top_missing_skill_for_user
+)
 from .logic import JobMatcher, SemanticJobMatcher
-from .mongo_ingestion_utils import get_async_matches_collection
-from datetime import datetime, timezone
-from .train import build_semantic_model, build_model
+from .train import build_semantic_model
+from backend.services.jobmatches_service import upsert_job_match
+from backend.db.mongo import get_db
+from bson import ObjectId
 
 router = APIRouter()
 
@@ -23,6 +27,7 @@ except FileNotFoundError as e:
 except Exception as e:
     print(f"❌ Unexpected error loading models: {e}")
 
+
 # --- Pydantic Models
 class UserPreferences(BaseModel):
     desired_locations: List[str] = []
@@ -34,8 +39,11 @@ class UserPreferences(BaseModel):
 
 
 class RecommendationRequest(BaseModel):
-    id: str = Field(..., alias="_id",
-                         description="The ID of the user requesting matches")
+    id: str = Field(
+        ...,
+        alias="_id",
+        description="The ID of the user requesting matches"
+    )
     preferences: UserPreferences
 
 
@@ -60,31 +68,29 @@ async def get_recommendations(request: RecommendationRequest):
             matches = semantic_matcher.recommend(
                 request.preferences.model_dump(), top_n=10)
 
-        collection = get_async_matches_collection()
+        db = get_db()
 
         for match in matches:
-            await collection.update_one(
-                {
-                    "user_id": ObjectId(request.id),
-                    "job_id": ObjectId(match.get("job_id"))
-                },
-                {
-                    "$set": {
-                        "score": match["score"],
-                        "missing_skills": match["missing_skills"],
-                        "match_date": datetime.now(timezone.utc)
-                    }
-                },
-                upsert=True
+            await upsert_job_match(
+                db=db,
+                user_id=request.id,
+                job_id=match.get("job_id"),
+                score=match["score"],
+                missing_skills=match["missing_skills"],
+                recalc=False,  # Defer top missing skill recalculation until all matches are upserted
             )
+
+        await recalculate_top_missing_skill_for_user(db, ObjectId(request.id))
 
         return {"status": "success", "model_used": model_type,
                 "matches": matches}
 
     except Exception as e:
         print(f"ML Recommendation Error: {e}")
-        raise HTTPException(status_code=500,
-                            detail="Failed to generate or save recommendations.")
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to generate or save recommendations."
+        )
 
 
 @router.post("/train")

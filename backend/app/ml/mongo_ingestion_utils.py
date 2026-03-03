@@ -46,7 +46,7 @@ def get_sync_jobs_collection():
     if _sync_client is None:
         _sync_client = MongoClient(uri, serverSelectionTimeoutMS=5000)
 
-    return _sync_client[db_name]["cleaned_ingestion_data"]
+    return _sync_client[db_name]["jobs"]
 
 def get_async_matches_collection():
     """

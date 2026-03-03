@@ -1,4 +1,9 @@
+import os
+
 import pytest
+from bson import ObjectId
+from datetime import datetime
+from backend.db.mongo import get_db
 
 
 # ------------------------
@@ -12,7 +17,11 @@ async def test_create_user(client):
         "email": "john@test.com"
     }
 
-    response = await client.post("/users/", json=payload)
+    response = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert response.status_code == 201
 
@@ -20,18 +29,25 @@ async def test_create_user(client):
 
     assert body["name"] == payload["name"]
     assert body["email"] == payload["email"]
-    assert "id" in body
+    assert "_id" in body
 
 
 @pytest.mark.asyncio
 async def test_get_users(client):
 
-    await client.post("/users/", json={
-        "name": "Jane Hill",
-        "email": "jane@test.com"
-    })
+    await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Jane Hill",
+            "email": "jane@test.com"
+        }
+    )
 
-    response = await client.get("/users/")
+    response = await client.get(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert response.status_code == 200
     assert len(response.json()) >= 1
@@ -40,31 +56,43 @@ async def test_get_users(client):
 @pytest.mark.asyncio
 async def test_get_user_by_id(client):
 
-    create = await client.post("/users/", json={
-        "name": "Noelle Lee",
-        "email": "noelle@test.com"
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Noelle Lee",
+            "email": "noelle@test.com"
+        }
+    )
 
-    user_id = create.json()["id"]
+    user_id = create.json()["_id"]
 
-    response = await client.get(f"/users/{user_id}")
+    response = await client.get(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert response.status_code == 200
-    assert response.json()["id"] == user_id
+    assert response.json()["_id"] == user_id
 
 
 @pytest.mark.asyncio
 async def test_update_user(client):
 
-    create = await client.post("/users/", json={
-        "name": "Bob Sam",
-        "email": "bob@test.com"
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Bob Sam",
+            "email": "bob@test.com"
+        }
+    )
 
-    user_id = create.json()["id"]
+    user_id = create.json()["_id"]
 
     update = await client.put(
         f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "New Name"}
     )
 
@@ -75,18 +103,28 @@ async def test_update_user(client):
 @pytest.mark.asyncio
 async def test_delete_user(client):
 
-    create = await client.post("/users/", json={
-        "name": "Delete Me",
-        "email": "delete@test.com"
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Delete Me",
+            "email": "delete@test.com"
+        }
+    )
 
-    user_id = create.json()["id"]
+    user_id = create.json()["_id"]
 
-    delete = await client.delete(f"/users/{user_id}")
+    delete = await client.delete(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert delete.status_code == 204
 
-    check = await client.get(f"/users/{user_id}")
+    check = await client.get(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
     assert check.status_code == 404
 
 
@@ -105,7 +143,11 @@ async def test_create_user_with_preferences(client):
         },
     }
 
-    res = await client.post("/users/", json=payload)
+    res = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert res.status_code == 201
 
@@ -117,18 +159,23 @@ async def test_create_user_with_preferences(client):
 
 @pytest.mark.asyncio
 async def test_patch_user_preferences(client):
-    create = await client.post("/users/", json={
-        "name": "Patch Pref",
-        "email": "patch@test.com",
-        "preferences": {
-            "experience_level": "junior"
-        },
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Patch Pref",
+            "email": "patch@test.com",
+            "preferences": {
+                "experience_level": "junior"
+            },
+        }
+    )
 
-    user_id = create.json()["id"]
+    user_id = create.json()["_id"]
 
     patch = await client.patch(
         f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "preferences": {
                 "salary_min": 80000,
@@ -148,53 +195,73 @@ async def test_patch_user_preferences(client):
 
 @pytest.mark.asyncio
 async def test_salary_validation(client):
-    res = await client.post("/users/", json={
-        "name": "Bad Salary",
-        "email": "bad@test.com",
-        "preferences": {
-            "salary_min": 150000,
-            "salary_max": 90000,
-        },
-    })
+    res = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Bad Salary",
+            "email": "bad@test.com",
+            "preferences": {
+                "salary_min": 150000,
+                "salary_max": 90000,
+            },
+        })
 
     assert res.status_code == 422
 
 
 @pytest.mark.asyncio
 async def test_patch_empty_payload(client):
-    create = await client.post("/users/", json={
-        "name": "Empty Patch",
-        "email": "empty@test.com",
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Empty Patch",
+            "email": "empty@test.com",
+        }
+    )
 
-    user_id = create.json()["id"]
+    user_id = create.json()["_id"]
 
-    patch = await client.patch(f"/users/{user_id}", json={})
+    patch = await client.patch(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={}
+    )
 
     assert patch.status_code == 400
 
 
 @pytest.mark.asyncio
 async def test_patch_invalid_id(client):
-    res = await client.patch("/users/notanid", json={"name": "X"})
+    res = await client.patch(
+        "/users/notanid",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={"name": "X"}
+    )
 
     assert res.status_code == 400
 
 
 @pytest.mark.asyncio
 async def test_updated_at_changes(client):
-    create = await client.post("/users/", json={
-        "name": "Time Test",
-        "email": "time@test.com",
-    })
+    create = await client.post(
+        "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "name": "Time Test",
+            "email": "time@test.com",
+        }
+    )
 
     body = create.json()
-    user_id = body["id"]
+    user_id = body["_id"]
 
     assert body["updated_at"] is None
 
     patch = await client.patch(
         f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Later"},
     )
 
@@ -228,7 +295,11 @@ async def test_create_job(client):
         },
     }
 
-    res = await client.post("/jobs/", json=payload)
+    res = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert res.status_code == 201
 
@@ -250,9 +321,17 @@ async def test_create_job_duplicate_external_id(client):
         "location": "NYC",
     }
 
-    await client.post("/jobs/", json=payload)
+    await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
-    dup = await client.post("/jobs/", json=payload)
+    dup = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert dup.status_code == 409
 
@@ -260,15 +339,21 @@ async def test_create_job_duplicate_external_id(client):
 @pytest.mark.asyncio
 async def test_get_jobs(client):
 
-    await client.post("/jobs/", json={
-        "external_id": "job-list",
-        "title": "Doctor",
-        "company": "City Hospital",
-        "description": "Provide patient care.",
-        "location": "Boston",
-    })
+    await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-list",
+            "title": "Doctor",
+            "company": "City Hospital",
+            "description": "Provide patient care.",
+            "location": "Boston",
+        })
 
-    res = await client.get("/jobs/")
+    res = await client.get(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert res.status_code == 200
     assert len(res.json()) >= 1
@@ -277,37 +362,47 @@ async def test_get_jobs(client):
 @pytest.mark.asyncio
 async def test_get_job_by_id(client):
 
-    create = await client.post("/jobs/", json={
-        "external_id": "job-get",
-        "title": "Teacher",
-        "company": "Public School",
-        "description": "Teach students.",
-        "location": "Denver",
-    })
+    create = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-get",
+            "title": "Teacher",
+            "company": "Public School",
+            "description": "Teach students.",
+            "location": "Denver",
+        })
 
-    job_id = create.json()["id"]
+    job_id = create.json()["_id"]
 
-    res = await client.get(f"/jobs/{job_id}")
+    res = await client.get(
+        f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert res.status_code == 200
-    assert res.json()["id"] == job_id
+    assert res.json()["_id"] == job_id
 
 
 @pytest.mark.asyncio
 async def test_patch_job_salary_range(client):
 
-    create = await client.post("/jobs/", json={
-        "external_id": "job-patch",
-        "title": "Urban Planner",
-        "company": "City Office",
-        "description": "Plan cities.",
-        "location": "Seattle",
-    })
+    create = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-patch",
+            "title": "Urban Planner",
+            "company": "City Office",
+            "description": "Plan cities.",
+            "location": "Seattle",
+        })
 
-    job_id = create.json()["id"]
+    job_id = create.json()["_id"]
 
     patch = await client.patch(
         f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "salary_range": {
                 "min": 90000,
@@ -327,17 +422,20 @@ async def test_patch_job_salary_range(client):
 @pytest.mark.asyncio
 async def test_job_salary_validation(client):
 
-    res = await client.post("/jobs/", json={
-        "external_id": "job-bad-salary",
-        "title": "Analyst",
-        "company": "Finance Corp",
-        "description": "Analyze data.",
-        "location": "Chicago",
-        "salary_range": {
-            "min": 150000,
-            "max": 80000,
-        },
-    })
+    res = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-bad-salary",
+            "title": "Analyst",
+            "company": "Finance Corp",
+            "description": "Analyze data.",
+            "location": "Chicago",
+            "salary_range": {
+                "min": 150000,
+                "max": 80000,
+            },
+        })
 
     assert res.status_code == 422
 
@@ -345,17 +443,23 @@ async def test_job_salary_validation(client):
 @pytest.mark.asyncio
 async def test_patch_empty_job_payload(client):
 
-    create = await client.post("/jobs/", json={
-        "external_id": "job-empty",
-        "title": "Consultant",
-        "company": "Biz Co",
-        "description": "Advise clients.",
-        "location": "Remote",
-    })
+    create = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-empty",
+            "title": "Consultant",
+            "company": "Biz Co",
+            "description": "Advise clients.",
+            "location": "Remote",
+        })
 
-    job_id = create.json()["id"]
+    job_id = create.json()["_id"]
 
-    patch = await client.patch(f"/jobs/{job_id}", json={})
+    patch = await client.patch(
+        f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={})
 
     assert patch.status_code == 400
 
@@ -363,29 +467,41 @@ async def test_patch_empty_job_payload(client):
 @pytest.mark.asyncio
 async def test_patch_job_invalid_id(client):
 
-    res = await client.patch("/jobs/notanid", json={"title": "X"})
-
+    res = await client.patch(
+        "/jobs/notanid",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={"title": "X"}
+    )
     assert res.status_code == 400
 
 
 @pytest.mark.asyncio
 async def test_delete_job(client):
 
-    create = await client.post("/jobs/", json={
-        "external_id": "job-del",
-        "title": "Music Producer",
-        "company": "Studio Inc",
-        "description": "Produce music.",
-        "location": "Nashville",
-    })
+    create = await client.post(
+        "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "external_id": "job-del",
+            "title": "Music Producer",
+            "company": "Studio Inc",
+            "description": "Produce music.",
+            "location": "Nashville",
+        })
 
-    job_id = create.json()["id"]
+    job_id = create.json()["_id"]
 
-    delete = await client.delete(f"/jobs/{job_id}")
+    delete = await client.delete(
+        f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert delete.status_code == 204
 
-    check = await client.get(f"/jobs/{job_id}")
+    check = await client.get(
+        f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert check.status_code == 404
 
@@ -399,10 +515,11 @@ async def test_create_saved_search(client):
     # create user first
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Saved User", "email": "saved@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     payload = {
         "user_id": user_id,
@@ -413,7 +530,11 @@ async def test_create_saved_search(client):
         },
     }
 
-    res = await client.post("/saved-searches/", json=payload)
+    res = await client.post(
+        "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert res.status_code == 201
 
@@ -431,13 +552,15 @@ async def test_get_saved_searches_for_user(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Search Owner", "email": "owner@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "ML Roles",
@@ -445,7 +568,10 @@ async def test_get_saved_searches_for_user(client):
         },
     )
 
-    res = await client.get(f"/saved-searches/user/{user_id}")
+    res = await client.get(
+        f"/saved-searches/user/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert res.status_code == 200
     assert len(res.json()) == 1
@@ -456,13 +582,15 @@ async def test_get_saved_search_by_id(client):
 
     user = await client.post(
         "/users/",
-        json={"name": "Lookup User", "email": "lookup@test.com"},
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={"name": "Search Owner", "email": "owner@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     create = await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "Backend Jobs",
@@ -472,7 +600,10 @@ async def test_get_saved_search_by_id(client):
 
     search_id = create.json()["id"]
 
-    res = await client.get(f"/saved-searches/{search_id}")
+    res = await client.get(
+        f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert res.status_code == 200
     assert res.json()["id"] == search_id
@@ -483,13 +614,15 @@ async def test_patch_saved_search(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Patch User", "email": "patch@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     create = await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "Old Name",
@@ -501,6 +634,7 @@ async def test_patch_saved_search(client):
 
     patch = await client.patch(
         f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"search_name": "Updated Name"},
     )
 
@@ -513,13 +647,15 @@ async def test_put_saved_search(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Put User", "email": "put@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     create = await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "Old",
@@ -531,6 +667,7 @@ async def test_put_saved_search(client):
 
     put = await client.put(
         f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "search_name": "New",
             "search_query": {"role": "frontend"},
@@ -546,13 +683,15 @@ async def test_delete_saved_search(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Delete User", "email": "delete@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     create = await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "Temp",
@@ -564,12 +703,14 @@ async def test_delete_saved_search(client):
 
     delete = await client.delete(
         f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
     )
 
     assert delete.status_code == 204
 
     check = await client.get(
         f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
     )
 
     assert check.status_code == 404
@@ -580,13 +721,15 @@ async def test_patch_empty_saved_search_payload(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Empty Patch", "email": "empty@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     create = await client.post(
         "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "search_name": "Name",
@@ -598,6 +741,7 @@ async def test_patch_empty_saved_search_payload(client):
 
     patch = await client.patch(
         f"/saved-searches/{search_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={},
     )
 
@@ -607,7 +751,10 @@ async def test_patch_empty_saved_search_payload(client):
 @pytest.mark.asyncio
 async def test_saved_search_invalid_id(client):
 
-    res = await client.get("/saved-searches/not-an-id")
+    res = await client.get(
+        "/saved-searches/not-an-id",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert res.status_code == 400
 
@@ -621,7 +768,11 @@ async def test_saved_search_invalid_user_fk(client):
         "search_query": {},
     }
 
-    res = await client.post("/saved-searches/", json=payload)
+    res = await client.post(
+        "/saved-searches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload
+    )
 
     assert res.status_code == 400
 
@@ -635,12 +786,16 @@ async def test_userstats_auto_created(client):
     """Test that user stats are automatically created when a user is created"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Stats User", "email": "stats@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
-    res = await client.get(f"/users/{user_id}/stats")
+    res = await client.get(
+        f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert res.status_code == 200
 
@@ -659,13 +814,15 @@ async def test_patch_userstats_fields(client):
     """Test updating user stats with valid data"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Stats Patch", "email": "patch@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     patch = await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "jobs_viewed": 5,
             "jobs_saved": 2,
@@ -688,14 +845,16 @@ async def test_patch_userstats_partial_update(client):
     """Test partial update of user stats"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Partial Update", "email": "partial@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     # Update only jobs_viewed
     patch = await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"jobs_viewed": 10},
     )
 
@@ -714,13 +873,15 @@ async def test_patch_empty_userstats_payload(client):
     """Test that empty payload returns error"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Empty Stats", "email": "empty@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     patch = await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={},
     )
 
@@ -731,7 +892,10 @@ async def test_patch_empty_userstats_payload(client):
 @pytest.mark.asyncio
 async def test_get_userstats_invalid_user_id(client):
     """Test getting stats with invalid user ID format"""
-    res = await client.get("/users/not_an_id/stats")
+    res = await client.get(
+        "/users/not_an_id/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert res.status_code == 400
     assert "Invalid user ID" in res.json()["detail"]
@@ -742,7 +906,10 @@ async def test_get_userstats_nonexistent_user(client):
     """Test getting stats for a user that doesn't exist"""
     from bson import ObjectId
     fake_id = str(ObjectId())
-    res = await client.get(f"/users/{fake_id}/stats")
+    res = await client.get(
+        f"/users/{fake_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
 
     assert res.status_code == 404
     assert "UserStats not found" in res.json()["detail"]
@@ -755,6 +922,7 @@ async def test_patch_userstats_nonexistent_user(client):
     fake_id = str(ObjectId())
     res = await client.patch(
         f"/users/{fake_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"jobs_viewed": 5},
     )
 
@@ -767,21 +935,31 @@ async def test_userstats_deleted_with_user(client):
     """Test that user stats are automatically deleted when user is deleted"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Stats Delete", "email": "del@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     # Verify stats exist
-    stats = await client.get(f"/users/{user_id}/stats")
+    stats = await client.get(
+        f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
     assert stats.status_code == 200
 
     # Delete user
-    delete_user = await client.delete(f"/users/{user_id}")
+    delete_user = await client.delete(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
     assert delete_user.status_code == 204
 
     # Verify stats are also gone
-    check_stats = await client.get(f"/users/{user_id}/stats")
+    check_stats = await client.get(
+        f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")}
+    )
     assert check_stats.status_code == 404
 
 
@@ -790,14 +968,16 @@ async def test_patch_userstats_invalid_data_types(client):
     """Test that invalid data types are rejected"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Invalid Data", "email": "invalid@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     # Try to send string for integer field
     patch = await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"jobs_viewed": "not_a_number"},
     )
 
@@ -809,26 +989,30 @@ async def test_userstats_incrementing_workflow(client):
     """Test a realistic workflow of incrementing stats over time"""
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Workflow User", "email": "workflow@test.com"},
     )
 
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     # First update
     await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"jobs_viewed": 1},
     )
 
     # Second update
     await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"jobs_viewed": 5, "jobs_saved": 1},
     )
 
     # Third update
     res = await client.patch(
         f"/users/{user_id}/stats",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "jobs_viewed": 10,
             "jobs_saved": 3,
@@ -853,11 +1037,13 @@ async def test_create_userjobinteraction(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Interaction User", "email": "ij@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-1",
             "title": "Biologist",
@@ -869,9 +1055,10 @@ async def test_create_userjobinteraction(client):
 
     res = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
@@ -880,8 +1067,8 @@ async def test_create_userjobinteraction(client):
 
     body = res.json()
 
-    assert body["user_id"] == user.json()["id"]
-    assert body["job_id"] == job.json()["id"]
+    assert body["user_id"] == user.json()["_id"]
+    assert body["job_id"] == job.json()["_id"]
     assert body["interaction_type"] == "viewed"
     assert "id" in body
     assert "timestamp" in body
@@ -893,6 +1080,7 @@ async def test_userjobinteraction_invalid_user_fk(client):
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-2",
             "title": "Chemist",
@@ -904,9 +1092,10 @@ async def test_userjobinteraction_invalid_user_fk(client):
 
     res = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": "notanid",
-            "job_id": job.json()["id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
@@ -921,11 +1110,13 @@ async def test_userjobinteraction_duplicate_blocked(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Dup IJ", "email": "dupij@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-3",
             "title": "Teacher",
@@ -936,13 +1127,14 @@ async def test_userjobinteraction_duplicate_blocked(client):
     )
 
     payload = {
-        "user_id": user.json()["id"],
-        "job_id": job.json()["id"],
+        "user_id": user.json()["_id"],
+        "job_id": job.json()["_id"],
         "interaction_type": "saved",
     }
 
     first = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json=payload,
     )
 
@@ -950,6 +1142,7 @@ async def test_userjobinteraction_duplicate_blocked(client):
 
     second = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json=payload,
     )
 
@@ -963,11 +1156,13 @@ async def test_get_interactions_by_user(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "User Fetch", "email": "uf@test.com"},
     )
 
     job1 = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-4",
             "title": "Nurse",
@@ -979,6 +1174,7 @@ async def test_get_interactions_by_user(client):
 
     job2 = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-5",
             "title": "Analyst",
@@ -990,24 +1186,27 @@ async def test_get_interactions_by_user(client):
 
     await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job1.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job1.json()["_id"],
             "interaction_type": "viewed",
         },
     )
 
     await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job2.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job2.json()["_id"],
             "interaction_type": "applied",
         },
     )
 
     res = await client.get(
-        f"/interactions/user/{user.json()['id']}"
+        f"/interactions/user/{user.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
     )
 
     assert res.status_code == 200
@@ -1021,11 +1220,13 @@ async def test_get_interactions_by_job(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "User Fetch", "email": "uf@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-5",
             "title": "Analyst",
@@ -1037,15 +1238,17 @@ async def test_get_interactions_by_job(client):
 
     await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "applied",
         },
     )
 
     res = await client.get(
-        f"/interactions/job/{job.json()['id']}"
+        f"/interactions/job/{job.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
     )
 
     assert res.status_code == 200
@@ -1060,11 +1263,13 @@ async def test_patch_userjobinteraction(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Patch IJ", "email": "patchij@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-6",
             "title": "Designer",
@@ -1076,9 +1281,10 @@ async def test_patch_userjobinteraction(client):
 
     create = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
@@ -1087,6 +1293,7 @@ async def test_patch_userjobinteraction(client):
 
     patch = await client.patch(
         f"/interactions/{iid}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"interaction_type": "saved"},
     )
 
@@ -1101,11 +1308,13 @@ async def test_patch_userjobinteraction_empty_payload(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Empty IJ", "email": "emptyij@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-7",
             "title": "Writer",
@@ -1117,9 +1326,10 @@ async def test_patch_userjobinteraction_empty_payload(client):
 
     create = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
@@ -1128,6 +1338,7 @@ async def test_patch_userjobinteraction_empty_payload(client):
 
     patch = await client.patch(
         f"/interactions/{iid}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={},
     )
 
@@ -1140,11 +1351,13 @@ async def test_delete_userjobinteraction(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Del IJ", "email": "delij@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-int-8",
             "title": "Clerk",
@@ -1156,9 +1369,10 @@ async def test_delete_userjobinteraction(client):
 
     create = await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
@@ -1166,7 +1380,8 @@ async def test_delete_userjobinteraction(client):
     iid = create.json()["id"]
 
     delete = await client.delete(
-        f"/interactions/{iid}"
+        f"/interactions/{iid}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
     )
 
     assert delete.status_code == 204
@@ -1179,11 +1394,13 @@ async def test_interactions_deleted_with_user(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Cascade User", "email": "cascade@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-cascade-1",
             "title": "Scientist",
@@ -1196,19 +1413,24 @@ async def test_interactions_deleted_with_user(client):
     # Create interaction
     await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "viewed",
         },
     )
 
     # Delete user
-    await client.delete(f"/users/{user.json()['id']}")
+    await client.delete(
+        f"/users/{user.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     # Verify interactions are gone
     res = await client.get(
-        f"/interactions/user/{user.json()['id']}"
+        f"/interactions/user/{user.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
     )
 
     assert res.status_code == 200
@@ -1222,11 +1444,13 @@ async def test_interactions_deleted_with_job(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Cascade Job", "email": "cascadejob@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-cascade-2",
             "title": "Engineer",
@@ -1239,19 +1463,24 @@ async def test_interactions_deleted_with_job(client):
     # Create interaction
     await client.post(
         "/interactions/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "interaction_type": "saved",
         },
     )
 
     # Delete job
-    await client.delete(f"/jobs/{job.json()['id']}")
+    await client.delete(
+        f"/jobs/{job.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     # Verify interactions are gone
     res = await client.get(
-        f"/interactions/job/{job.json()['id']}"
+        f"/interactions/job/{job.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
     )
 
     assert res.status_code == 200
@@ -1268,11 +1497,13 @@ async def test_create_jobmatch(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Match User", "email": "match@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-match-1",
             "title": "Data Scientist",
@@ -1283,13 +1514,17 @@ async def test_create_jobmatch(client):
     )
 
     payload = {
-        "user_id": user.json()["id"],
-        "job_id": job.json()["id"],
+        "user_id": user.json()["_id"],
+        "job_id": job.json()["_id"],
         "score": 0.87,
         "missing_skills": ["Docker"],
     }
 
-    res = await client.post("/job-matches/", json=payload)
+    res = await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload,
+    )
 
     assert res.status_code == 201
 
@@ -1310,11 +1545,13 @@ async def test_jobmatch_duplicate_blocked(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Dup Match", "email": "dup-match@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-match-dup",
             "title": "Engineer",
@@ -1325,16 +1562,24 @@ async def test_jobmatch_duplicate_blocked(client):
     )
 
     payload = {
-        "user_id": user.json()["id"],
-        "job_id": job.json()["id"],
+        "user_id": user.json()["_id"],
+        "job_id": job.json()["_id"],
         "score": 0.75,
         "missing_skills": [],
     }
 
-    first = await client.post("/job-matches/", json=payload)
+    first = await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload,
+    )
     assert first.status_code == 201
 
-    second = await client.post("/job-matches/", json=payload)
+    second = await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json=payload,
+    )
     assert second.status_code == 409
 
 
@@ -1345,11 +1590,13 @@ async def test_get_jobmatches_for_user(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "List Match", "email": "list@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-match-list",
             "title": "Analyst",
@@ -1361,15 +1608,19 @@ async def test_get_jobmatches_for_user(client):
 
     await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "score": 0.6,
             "missing_skills": [],
         },
     )
 
-    res = await client.get(f"/job-matches/user/{user.json()['id']}")
+    res = await client.get(
+        f"/job-matches/user/{user.json()['_id']}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
 
     assert res.status_code == 200
     assert len(res.json()) == 1
@@ -1382,11 +1633,13 @@ async def test_patch_jobmatch(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Patch Match", "email": "patchmatch@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-match-patch",
             "title": "Architect",
@@ -1398,9 +1651,10 @@ async def test_patch_jobmatch(client):
 
     create = await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "score": 0.5,
             "missing_skills": [],
         },
@@ -1410,6 +1664,7 @@ async def test_patch_jobmatch(client):
 
     patch = await client.patch(
         f"/job-matches/{match_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"score": 0.9},
     )
 
@@ -1424,11 +1679,13 @@ async def test_delete_jobmatch(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Delete Match", "email": "delmatch@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-match-del",
             "title": "Nurse",
@@ -1440,9 +1697,10 @@ async def test_delete_jobmatch(client):
 
     create = await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "score": 0.8,
             "missing_skills": [],
         },
@@ -1450,7 +1708,10 @@ async def test_delete_jobmatch(client):
 
     match_id = create.json()["id"]
 
-    delete = await client.delete(f"/job-matches/{match_id}")
+    delete = await client.delete(
+        f"/job-matches/{match_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
     assert delete.status_code == 204
 
 
@@ -1461,6 +1722,7 @@ async def test_jobmatch_invalid_fk(client):
 
     res = await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": "invalid",
             "job_id": "invalid",
@@ -1479,11 +1741,13 @@ async def test_jobmatch_score_validation(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Score Test", "email": "score@test.com"},
     )
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-score",
             "title": "QA",
@@ -1495,9 +1759,10 @@ async def test_jobmatch_score_validation(client):
 
     res = await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
-            "user_id": user.json()["id"],
-            "job_id": job.json()["id"],
+            "user_id": user.json()["_id"],
+            "job_id": job.json()["_id"],
             "score": 1.5,  # invalid
             "missing_skills": [],
         },
@@ -1513,12 +1778,14 @@ async def test_user_delete_cascades_jobmatches(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Cascade User", "email": "cascade_user@test.com"},
     )
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-cascade-1",
             "title": "Engineer",
@@ -1527,10 +1794,11 @@ async def test_user_delete_cascades_jobmatches(client):
             "location": "Remote",
         },
     )
-    job_id = job.json()["id"]
+    job_id = job.json()["_id"]
 
     await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "job_id": job_id,
@@ -1539,10 +1807,16 @@ async def test_user_delete_cascades_jobmatches(client):
         },
     )
 
-    delete = await client.delete(f"/users/{user_id}")
+    delete = await client.delete(
+        f"/users/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
     assert delete.status_code == 204
 
-    matches = await client.get(f"/job-matches/user/{user_id}")
+    matches = await client.get(
+        f"/job-matches/user/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
     assert matches.status_code == 200
     assert matches.json() == []
 
@@ -1554,12 +1828,14 @@ async def test_job_delete_cascades_jobmatches(client):
 
     user = await client.post(
         "/users/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={"name": "Cascade Job User", "email": "cascade_job@test.com"},
     )
-    user_id = user.json()["id"]
+    user_id = user.json()["_id"]
 
     job = await client.post(
         "/jobs/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "external_id": "job-cascade-2",
             "title": "Data Scientist",
@@ -1568,10 +1844,11 @@ async def test_job_delete_cascades_jobmatches(client):
             "location": "NYC",
         },
     )
-    job_id = job.json()["id"]
+    job_id = job.json()["_id"]
 
     await client.post(
         "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
         json={
             "user_id": user_id,
             "job_id": job_id,
@@ -1580,9 +1857,108 @@ async def test_job_delete_cascades_jobmatches(client):
         },
     )
 
-    delete = await client.delete(f"/jobs/{job_id}")
+    delete = await client.delete(
+        f"/jobs/{job_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
     assert delete.status_code == 204
 
-    matches = await client.get(f"/job-matches/user/{user_id}")
+    matches = await client.get(
+        f"/job-matches/user/{user_id}",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+    )
     assert matches.status_code == 200
     assert matches.json() == []
+
+
+@pytest.mark.asyncio
+async def test_top_missing_skill_updates_on_create(client):
+
+    db = get_db()
+
+    # Create user
+    user_id = ObjectId()
+    await db.users.insert_one({"_id": user_id})
+
+    # Create UserStats for that user
+    await db.user_stats.insert_one({
+        "user_id": user_id,
+        "jobs_viewed": 0,
+        "jobs_saved": 0,
+        "top_missing_skill": None,
+        "created_at": datetime.utcnow()
+    })
+
+    # Create job
+    job_id = ObjectId()
+    await db.jobs.insert_one({"_id": job_id})
+
+    # Create job match with missing skills
+    response = await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "user_id": str(user_id),
+            "job_id": str(job_id),
+            "score": 0.7,
+            "missing_skills": ["Python", "SQL"]
+        }
+    )
+
+    assert response.status_code == 201
+
+    # Verify automatic recalculation happened
+    stats = await db.user_stats.find_one({"user_id": user_id})
+
+    assert stats["top_missing_skill"] in ["Python", "SQL"]
+
+
+@pytest.mark.asyncio
+async def test_top_missing_skill_counts_correctly(client):
+
+    db = get_db()
+
+    user_id = ObjectId()
+    await db.users.insert_one({"_id": user_id})
+    await db.user_stats.insert_one({
+        "user_id": user_id,
+        "jobs_viewed": 0,
+        "jobs_saved": 0,
+        "top_missing_skill": None,
+        "created_at": datetime.utcnow()
+    })
+
+    job1 = ObjectId()
+    job2 = ObjectId()
+
+    await db.jobs.insert_many([
+        {"_id": job1, "external_id": "job1"},
+        {"_id": job2, "external_id": "job2"}
+    ])
+
+    # First match
+    await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "user_id": str(user_id),
+            "job_id": str(job1),
+            "score": 0.8,
+            "missing_skills": ["Python"]
+        })
+
+    # Second match
+    await client.post(
+        "/job-matches/",
+        headers={"aijobhunt-api-secret": os.getenv("API_SECRET")},
+        json={
+            "user_id": str(user_id),
+            "job_id": str(job2),
+            "score": 0.9,
+            "missing_skills": ["Python", "AWS"]
+        })
+
+    stats = await db.user_stats.find_one({"user_id": user_id})
+
+    # Python appears twice
+    assert stats["top_missing_skill"] == "Python"

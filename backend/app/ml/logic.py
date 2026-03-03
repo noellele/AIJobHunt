@@ -246,7 +246,7 @@ class JobMatcher:
                 "title": job_row.get("title", "Unknown"),
                 "company": job_row.get("company", "Unknown"),
                 "score": round(score, 2),
-                "missing_skill": missing
+                "missing_skills": missing
             })
 
         return results
