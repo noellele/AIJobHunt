@@ -10,6 +10,7 @@ from .train import build_semantic_model
 from backend.services.jobmatches_service import upsert_job_match
 from backend.db.mongo import get_db
 from bson import ObjectId
+from .mongo_ingestion_utils import get_async_matches_collection
 
 router = APIRouter()
 
@@ -49,6 +50,37 @@ class RecommendationRequest(BaseModel):
 
 # --- API Endpoints ---
 
+@router.get("/matches/user/{user_id}/job/{job_id}")
+async def get_specific_match(user_id: str, job_id: str):
+    """
+    Fetches a previously calculated match score from the database.
+    """
+    if user_id == "undefined" or job_id == "undefined":
+        return {"score": 0, "missing_skills": [], "status": "pending_id"}
+    try:
+        u_oid = ObjectId(user_id)
+        j_oid = ObjectId(job_id)
+        collection = get_async_matches_collection()
+        match = await collection.find_one({
+            "user_id": u_oid,
+            "job_id": j_oid
+        })
+
+        if not match:
+            # If no match exists in the DB, return a neutral response 
+            return {"score": 0, "missing_skills": []}
+
+        return {
+            "score": match.get("score", 0),
+            "missing_skills": match.get("missing_skills", []),
+            "match_date": match.get("match_date")
+        }
+
+    except Exception as e:
+        print(f"Error fetching match score: {e}")
+        raise HTTPException(status_code=500, detail="Error retrieving match data.")
+
+
 @router.post("/job-matches")
 async def get_recommendations(request: RecommendationRequest):
     """
@@ -58,29 +90,44 @@ async def get_recommendations(request: RecommendationRequest):
 
     Returns:
     """
+    global semantic_matcher, tfidf_matcher
+    
+    # 1. Convert to ObjectId immediately to avoid format errors later
+    try:
+        user_oid = ObjectId(request.id)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid User ID format")
+
+    # On-the-fly recovery if models are None
+    if semantic_matcher is None:
+        try:
+            print("🔄 Attempting on-the-fly model load...")
+            semantic_matcher = SemanticJobMatcher()
+            tfidf_matcher = JobMatcher()
+        except Exception as e:
+            print(f"❌ Failed to initialize models: {e}")
+            raise HTTPException(status_code=503, detail="ML Models not ready. Run /train.")
 
     model_type = "semantic"
     try:
         if model_type == "tfidf":
-            matches = tfidf_matcher.recommend(request.preferences.model_dump(),
-                                              top_n=10)
+            matches = tfidf_matcher.recommend(request.preferences.model_dump(), top_n=10)
         else:
-            matches = semantic_matcher.recommend(
-                request.preferences.model_dump(), top_n=10)
+            matches = semantic_matcher.recommend(request.preferences.model_dump(), top_n=10)
 
         db = get_db()
 
         for match in matches:
             await upsert_job_match(
                 db=db,
-                user_id=request.id,
-                job_id=match.get("job_id"),
+                user_id=user_oid,
+                job_id=ObjectId(match.get("job_id")),
                 score=match["score"],
                 missing_skills=match["missing_skills"],
                 recalc=False,  # Defer top missing skill recalculation until all matches are upserted
             )
 
-        await recalculate_top_missing_skill_for_user(db, ObjectId(request.id))
+        await recalculate_top_missing_skill_for_user(db, user_oid)
 
         return {"status": "success", "model_used": model_type,
                 "matches": matches}
@@ -101,6 +148,8 @@ async def trigger_training():
 
     try:
         build_semantic_model()
+        tfidf_matcher = JobMatcher()
+        semantic_matcher = SemanticJobMatcher()
         return {"status": "success",
                 "message": "ML models rebuilt and cached."}
     except Exception as e:

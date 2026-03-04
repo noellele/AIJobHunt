@@ -43,22 +43,26 @@ const Search = () => {
     }
   };
 
-  const handleSearch = async (criteria) => {
-    setSearching(true);
-    setSearchError("");
-    try {
-      const response = await api.post('/jobs/search', criteria);
-      console.log("Searching for: ", criteria)
-      console.log(response)
-      setResults(response.data);
-    } catch (err) {
-      console.error("Search API Error:", err);
-      const message = err.response?.data?.detail || "Failed to fetch job matches.";
-      setSearchError(message);
-    } finally {
-      setSearching(false);
-    }
-  };
+const handleSearch = async (criteria) => {
+  setSearching(true);
+  setSearchError("");
+  try {
+    const payload = {
+      _id: user._id || user.id, 
+      preferences: criteria
+    };
+    const response = await api.post('/ml/job-matches', payload);
+    console.log("Matches found:", response.data.matches?.length);
+    
+    setResults(response.data.matches || []); 
+  } catch (err) {
+    console.error("Search API Error:", err);
+    const message = err.response?.data?.detail || "Failed to fetch job matches.";
+    setSearchError(message);
+  } finally {
+    setSearching(false);
+  }
+};
 
   if (loading) {
     return (

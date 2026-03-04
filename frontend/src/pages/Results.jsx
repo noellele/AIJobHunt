@@ -3,23 +3,21 @@ import { Container, Alert, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import JobCard from '../components/JobCard';
+import api from '../services/api';
 
 const Results = ({ results }) => {
   const location = useLocation();
   const { user, loading } = useAuth();
   const [savedJobIds, setSavedJobIds] = useState(new Set());
   const filters = location.state?.filters;
-  const fetch_url = import.meta.env.VITE_API_URL;
 
-  // Get saved jobs to display saved status on JobCard
   useEffect(() => {
     const fetchSavedJobs = async () => {
       if (!user?.id) return;
-
       try {
-        const response = await fetch(`${fetch_url}/interactions/user/${user.id}`);
-        if (response.ok) {
-          const interactions = await response.json();
+        const response = await api.get(`/interactions/user/${user.id}`);
+        if (response.status === 200) {
+          const interactions = response.data;
           const savedIds = new Set(
             interactions
               .filter(i => i.interaction_type === 'saved')
@@ -71,14 +69,25 @@ const Results = ({ results }) => {
       )}
 
       <div className="job-list">
-        {results.map((job) => (
-          <JobCard
-            key={job.external_id}
-            job={job}
-            initialSaved={savedJobIds.has(job.id || job._id)}
-            onUnsave={() => setSavedJobs(prev => prev.filter(j => j.id !== job.id))}
-          />
-        ))}
+        {results.map((job, index) => {
+          const currentId = job.job_id || job._id || job.id;
+
+          return (
+            <JobCard
+              key={currentId}
+              job={{ ...job, id: currentId }}
+              initialSaved={savedJobIds.has(currentId)}
+              onUnsave={() => {
+                setSavedJobIds(prev => {
+                  const newSet = new Set(prev);
+                  newSet.delete(currentId);
+                  return newSet;
+                });
+              }}
+            />
+          );
+        })}
+        2. Verify your /ml/job-matches
       </div>
 
     </Container>

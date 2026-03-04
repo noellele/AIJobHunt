@@ -7,6 +7,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sentence_transformers import SentenceTransformer, util
+import os
 
 # --- SETUP NLP ---
 nlp = spacy.load("en_core_web_sm")
@@ -141,7 +142,10 @@ class JobMatcher:
             raise FileNotFoundError(f"Model artifact not found at {model_path}. Run train.py first.")
 
         with open(model_path, "rb") as fd:
-            self.tfidf, self.tfidf_matrix, self.df = pickle.load(fd)
+            loaded_data = pickle.load(fd)
+            self.tfidf = loaded_data[0]
+            self.tfidf_matrix = loaded_data[1]
+            self.df = loaded_data[2]
 
         # Get the vocabulary
         self.feature_names = np.array(self.tfidf.get_feature_names_out())
@@ -267,8 +271,15 @@ class SemanticJobMatcher:
                                     f"{base_path}. Run train.py first.")
 
         with open(base_path, "rb") as fd:
-            self.job_embeddings, self.df = pickle.load(fd)
+            data = pickle.load(fd)            
+            # Access by keys instead of unpacking by position
+            self.job_embeddings = data.get("embeddings")
+            self.df = data.get("df")
+            # If you saved job_ids, you can grab them too
+            self.job_ids = data.get("job_ids")
 
+        print("✅ Semantic Matcher initialized successfully.")
+        
     @staticmethod
     def get_missing_skills_basic(user_skills: list, job_skills:
     list) -> list:
@@ -406,6 +417,9 @@ class SemanticJobMatcher:
                 "job_id": str(job_row.get("_id")),
                 "title": job_row.get("title", "Unknown"),
                 "company": job_row.get("company", "Unknown"),
+                "location": job_row.get("location", "Remote / Not Listed"),
+                "url": job_row.get("source_url") or "#",
+                "salary_range": job_row.get("salary_range", {"min": None, "max": None}),
                 "score": round(score, 2),
                 "missing_skills": missing
             })

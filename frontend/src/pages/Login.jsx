@@ -41,14 +41,15 @@ const Login = () => {
       password: import.meta.env.VITE_DEV_BYPASS_PASSWORD
     };
     try {
-      const response = await api.post('/auth/login', devCredentials);
+      const response = await api.post('/auth/login', devCredentials, {
+        headers: { Authorization: undefined } // Explicitly clear any old token
+      });
       const { access_token, user } = response.data;
       if (user) {
         login(access_token, user);
         navigate('/dashboard');
-      } 
+      }
     } catch (err) {
-      console.error("Bypass failed: ", err);
       setAuthError("Bypass failed. Check your .env and backend.");
     }
   };

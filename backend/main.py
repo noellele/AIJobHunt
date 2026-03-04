@@ -31,15 +31,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-API_SECRET = os.getenv("API_SECRET")
-
-
-@app.middleware("http")
-async def verify_secret_header(request: Request, call_next):
-    secret = request.headers.get("aijobhunt-api-secret")
-    if secret != API_SECRET:
-        return JSONResponse(status_code=403, content={"detail": "Forbidden"})
-    return await call_next(request)
+API_SECRET = os.getenv("API_SECRET").strip()
 
 app.add_middleware(
     CORSMiddleware,
@@ -51,6 +43,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.middleware("http")
+async def verify_secret_header(request: Request, call_next):
+    if request.method == "OPTIONS":
+        return await call_next(request)
+    secret = request.headers.get("aijobhunt-api-secret")
+    if secret != API_SECRET:
+        print(f"Mismatch! Header: '{secret}' vs Env: '{API_SECRET}'")
+        return JSONResponse(status_code=403, content={"detail": "Forbidden"})
+    return await call_next(request)
 
 app.include_router(userstats.router, prefix="/users", tags=["User Stats"])
 app.include_router(jobs.router, prefix="/jobs", tags=["Jobs"])
@@ -72,6 +74,4 @@ app.include_router(
 )
 app.include_router(ingestion.router, prefix="/ingestion", tags=["Ingestion"])
 app.include_router(routes_ml.router, prefix="/ml", tags=["Machine Learning"])
-# /users route must be last
 app.include_router(users.router, prefix="/users", tags=["Users"])
-# do not add routes after this

@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-\      <section className="bg-white py-5 mb-5 border-bottom">
+      <section className="bg-white py-5 mb-5 border-bottom">
         <Container className="py-5">
           <Row className="justify-content-center text-center">
             <Col lg={8}>

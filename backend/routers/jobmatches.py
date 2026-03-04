@@ -46,6 +46,22 @@ async def get_matches_for_user(user_id: str):
 
     return matches
 
+@router.get("/user/{user_id}/job/{job_id}", response_model=JobMatchInDB)
+async def get_specific_job_match(user_id: str, job_id: str):
+    db = get_db()
+    user_oid = validate_object_id(user_id, "user ID")
+    job_oid = validate_object_id(job_id, "job ID")
+
+    match = await db.job_matches.find_one({
+        "user_id": user_oid,
+        "job_id": job_oid
+    })
+
+    if not match:
+        raise HTTPException(status_code=404, detail="Match score not calculated yet")
+
+    return jobmatch_helper(match)
+
 
 @router.patch("/{match_id}", response_model=JobMatchInDB)
 async def update_job_match(match_id: str, updates: JobMatchUpdate):

@@ -11,6 +11,7 @@ from backend.models.userjobinteraction import (
     UserJobInteractionInDB,
     userjobinteraction_helper,
 )
+from bson import ObjectId
 
 router = APIRouter()
 
@@ -96,14 +97,26 @@ async def update_interaction(
     return userjobinteraction_helper(updated)
 
 
-@router.delete("/{interaction_id}", status_code=204)
-async def delete_interaction(interaction_id: str):
-    interaction_oid = validate_object_id(interaction_id, "interaction ID")
+@router.delete("/user/{user_id}/job/{job_id}")
+async def delete_interaction(user_id: str, job_id: str):
     db = get_db()
-
-    result = await db.user_job_interactions.delete_one(
-        {"_id": interaction_oid}
-    )
-
-    if result.deleted_count == 0:
-        raise HTTPException(404, "Interaction not found")
+    try:
+        u_oid = ObjectId(user_id.strip())
+        j_oid = ObjectId(job_id.strip())
+        result = await db.user_job_interactions.delete_one({
+            "user_id": u_oid,
+            "job_id": j_oid,
+            "interaction_type": "saved"
+        })
+        if result.deleted_count == 0:
+            result = await db.user_job_interactions.delete_one({
+                "user_id": user_id,
+                "job_id": job_id,
+                "interaction_type": "saved"
+            })
+        if result.deleted_count == 0:
+            raise HTTPException(status_code=404, detail="Saved interaction not found in database.")
+        return {"status": "success", "message": "Interaction deleted."}
+    except Exception as e:
+        print(f"Delete Error: {str(e)}")
+        raise HTTPException(status_code=400, detail="Invalid ID format or database error.")

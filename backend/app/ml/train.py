@@ -4,6 +4,17 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sentence_transformers import SentenceTransformer
 from .logic import clean_text, clean_text_for_embeddings
 from .mongo_ingestion_utils import get_sync_jobs_collection
+import os
+
+# Get the absolute path to the current directory 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
+
+# Create the directory if it doesn't exist
+os.makedirs(MODEL_DIR, exist_ok=True)
+
+# Define the full path to use in pickle.dump()
+MODEL_PATH = os.path.join(MODEL_DIR, "semantic_model.pkl")
 
 def fetch_jobs_data() -> pd.DataFrame:
     """
@@ -77,11 +88,16 @@ def build_semantic_model():
 
     job_embeddings = model.encode(df['processed_text'].tolist(),
                                   show_progress_bar=True)
+    data_to_save = {
+        "embeddings": job_embeddings,
+        "df": df,
+        "job_ids": df['_id'].astype(str).tolist()
+    }
 
     # Save the artifacts
     print("Saving semantic_model.pkl...")
-    with open("models/semantic_model.pkl", "wb") as fd:
-        pickle.dump((job_embeddings, df), fd)
+    with open(MODEL_PATH, "wb") as fd:
+        pickle.dump(data_to_save, fd)
 
     print("Semantic Model built successfully!")
 

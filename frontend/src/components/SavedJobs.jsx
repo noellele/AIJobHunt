@@ -3,12 +3,12 @@ import { Spinner, Alert, Button, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import JobCard from './JobCard';
+import api from '../services/api';
 
 const SavedJobs = () => {
   const { user } = useAuth();
   const [savedJobs, setSavedJobs] = useState([]);
   const [loading, setLoading] = useState(true);
-  const fetch_url = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchSaved = async () => {
@@ -17,8 +17,8 @@ const SavedJobs = () => {
         return;
       }
       try {
-        const res = await fetch(`${fetch_url}/interactions/user/${user.id}`);
-        const interactions = await res.json();
+        const res = await api.get(`/interactions/user/${user.id}`);
+        const interactions = await res.data;
         const savedIds = interactions
           .filter(i => i.interaction_type === 'saved')
           .map(i => i.job_id);
@@ -27,8 +27,8 @@ const SavedJobs = () => {
           setSavedJobs([]);
           return;
         }
-        const jobsRes = await fetch(`${fetch_url}/jobs/`);
-        const allJobs = await jobsRes.json();
+        const jobsRes = await api.get(`/jobs/`);
+        const allJobs = await jobsRes.data;
         setSavedJobs(allJobs.filter(j => savedIds.includes(j.id || j._id)));
       } catch (err) {
         console.error("Failed to load saved jobs", err);
