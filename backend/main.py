@@ -54,7 +54,7 @@ async def verify_secret_header(request: Request, call_next):
         return JSONResponse(status_code=403, content={"detail": "Forbidden"})
     return await call_next(request)
 
-app.include_router(userstats.router, prefix="/users", tags=["User Stats"])
+app.include_router(userstats.router, prefix="/user-stats", tags=["User Stats"])
 app.include_router(jobs.router, prefix="/jobs", tags=["Jobs"])
 app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 app.include_router(

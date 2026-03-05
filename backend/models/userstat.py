@@ -27,15 +27,19 @@ class UserStatsUpdate(BaseModel):
 
 class UserStatsInDB(UserStatsBase):
     id: str
+    user_id: str
+    top_missing_skill: Optional[str] = None
+    jobs_viewed: Optional[int] = 0
+    last_calculated: Optional[datetime] = None
 
 
 def userstats_helper(doc) -> dict:
     return {
         "id": str(doc["_id"]),
         "user_id": str(doc["user_id"]),
-        "jobs_viewed": doc["jobs_viewed"],
-        "jobs_saved": doc["jobs_saved"],
+        "jobs_viewed": doc.get("jobs_viewed", 0),
+        "jobs_saved": doc.get("jobs_saved", 0),
         "top_missing_skill": doc.get("top_missing_skill"),
-        "created_at": doc["created_at"],
+        "created_at": doc.get("created_at") or datetime.now(timezone.utc),
         "last_calculated": doc.get("last_calculated"),
     }
